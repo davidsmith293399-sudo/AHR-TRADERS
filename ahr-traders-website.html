@@ -1,0 +1,9396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AHR TRADERS</title>
+<style>
+/* =========================================================
+   AHR TRADERS - PREMIUM DARK TRADING DESIGN
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050708;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    width: 100%;
+    min-height: 72px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(5, 7, 8, 0.96);
+    border-bottom: 1px solid #1b2428;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #00d084;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #aeb8bd;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #00d084;
+}
+
+.login-btn {
+    background: transparent;
+    color: #00d084;
+    border: 1px solid #00d084;
+    padding: 10px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #00d084;
+    color: #000;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(circle at center, #10231d 0%, #050708 55%);
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.small-title {
+    color: #00d084;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #00d084;
+}
+
+.hero p:not(.small-title) {
+    color: #9da8ad;
+    font-size: 17px;
+    max-width: 650px;
+    margin: auto;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.features,
+.strategies {
+    padding: 85px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title p {
+    color: #00d084;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.section-title span {
+    color: #7f8b90;
+}
+
+
+/* =========================================================
+   BOT GRID
+   ========================================================= */
+
+.feature-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* =========================================================
+   BOT CARD
+   ========================================================= */
+
+.feature-card {
+    background: linear-gradient(145deg, #0c1113, #080b0c);
+
+    border: 1px solid #202a2e;
+
+    border-radius: 16px;
+
+    padding: 32px;
+
+    position: relative;
+
+    transition: 0.35s;
+
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+
+    background: #00d084;
+
+    opacity: 0.04;
+
+    border-radius: 50%;
+
+    right: -60px;
+    top: -60px;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #00d084;
+
+    box-shadow:
+        0 15px 40px rgba(0, 208, 132, 0.08);
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #101a17;
+
+    border: 1px solid #1e4034;
+
+    border-radius: 12px;
+
+    font-size: 25px;
+
+    margin-bottom: 25px;
+}
+
+.feature-card h3 {
+    font-size: 24px;
+    margin-bottom: 14px;
+}
+
+.feature-card p {
+    color: #89959a;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.feature-card ul {
+    list-style: none;
+    margin-bottom: 28px;
+}
+
+.feature-card li {
+    color: #b7c1c5;
+    font-size: 13px;
+    margin: 9px 0;
+}
+
+
+/* =========================================================
+   BOT BUTTON
+   ========================================================= */
+
+.bot-btn {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #00d084;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #00d084;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.bot-btn:hover {
+    background: #00d084;
+    color: #000;
+}
+
+
+/* =========================================================
+   WHY AHR
+   ========================================================= */
+
+.strategies {
+    background: #080b0c;
+}
+
+.strategy-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.strategy-card {
+    background: #0c1113;
+
+    border: 1px solid #1c2529;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    transition: 0.3s;
+}
+
+.strategy-card:hover {
+    border-color: #00d084;
+    transform: translateY(-5px);
+}
+
+.strategy-card h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.strategy-card p {
+    color: #859197;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.cta {
+    padding: 90px 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at center, #10251e 0%, #050708 65%);
+}
+
+.cta h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    color: #8d999e;
+    max-width: 600px;
+    margin: auto auto 30px;
+}
+
+.cta button {
+    background: #00d084;
+
+    color: #000;
+
+    border: none;
+
+    padding: 14px 28px;
+
+    border-radius: 7px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.cta button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 208, 132, 0.25);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    text-align: center;
+
+    padding: 45px 20px;
+
+    background: #030405;
+
+    border-top: 1px solid #182023;
+}
+
+footer .logo {
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #687479;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+    }
+
+    .strategy-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        min-height: 380px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .features,
+    .strategies {
+        padding: 60px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .strategy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta h2 {
+        font-size: 30px;
+    }
+
+}
+/* ===== gold-hunter.html ===== */
+#page-gold-hunter .product-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+#page-gold-hunter .product-btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+            border: 1px solid #00d084;
+            cursor: pointer;
+        }
+#page-gold-hunter .download-btn {
+            background: #00d084;
+            color: #050708;
+        }
+#page-gold-hunter .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(0, 208, 132, 0.35);
+        }
+#page-gold-hunter .demo-btn {
+            background: transparent;
+            color: #00d084;
+        }
+#page-gold-hunter .demo-btn:hover {
+            background: #00d084;
+            color: #050708;
+            transform: translateY(-3px);
+        }
+#page-gold-hunter .buy-btn {
+            background: #ffffff;
+            color: #050708;
+            border-color: #ffffff;
+        }
+#page-gold-hunter .buy-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(255,255,255,0.20);
+        }
+#page-gold-hunter .product-note {
+            margin-top: 18px;
+            color: #888;
+            font-size: 14px;
+        }
+#page-gold-hunter .product-price {
+            font-size: 28px;
+            font-weight: 800;
+            color: #00d084;
+            margin-top: 15px;
+        }
+#page-gold-hunter .gold-highlight {
+            color: #00d084;
+            font-weight: 700;
+        }
+#page-gold-hunter .step-number {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: #00d084;
+            color: #050708;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+@media (max-width: 600px) {#page-gold-hunter .product-buttons {
+                flex-direction: column;
+            }
+#page-gold-hunter .product-btn {
+                width: 85%;
+                text-align: center;
+            }}
+/* ===== signal-ea.html ===== */
+#page-signal-ea .product-hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px;
+            background:
+                radial-gradient(circle at top,
+                rgba(0, 208, 132, 0.15),
+                transparent 45%);
+        }
+#page-signal-ea .product-hero h1 {
+            font-size: 58px;
+            margin-bottom: 15px;
+        }
+#page-signal-ea .product-hero h1 span {
+            color: #00d084;
+        }
+#page-signal-ea .product-hero p {
+            max-width: 750px;
+            margin: auto;
+            color: #aab4bd;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+#page-signal-ea .product-buttons {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+#page-signal-ea .product-btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            border: 1px solid #00d084;
+            color: #00d084;
+            background: transparent;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+#page-signal-ea .product-btn:hover {
+            background: #00d084;
+            color: #050708;
+            transform: translateY(-2px);
+        }
+#page-signal-ea .product-btn.primary {
+            background: #00d084;
+            color: #050708;
+        }
+#page-signal-ea .product-section {
+            padding: 80px 7%;
+        }
+#page-signal-ea .product-section h2 {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+#page-signal-ea .section-description {
+            max-width: 750px;
+            margin: 0 auto 45px;
+            text-align: center;
+            color: #9ca6af;
+            line-height: 1.7;
+        }
+#page-signal-ea .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1150px;
+            margin: auto;
+        }
+#page-signal-ea .product-card {
+            background: #0b1013;
+            border: 1px solid #182126;
+            border-radius: 14px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+#page-signal-ea .product-card:hover {
+            border-color: #00d084;
+            transform: translateY(-5px);
+        }
+#page-signal-ea .product-card h3 {
+            color: #00d084;
+            margin-bottom: 12px;
+        }
+#page-signal-ea .product-card p {
+            color: #aab4bd;
+            line-height: 1.7;
+        }
+#page-signal-ea .signal-list {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+#page-signal-ea .signal-item {
+            background: #0b1013;
+            border: 1px solid #182126;
+            padding: 20px;
+            border-radius: 10px;
+            color: #d8dee3;
+        }
+#page-signal-ea .signal-item span {
+            color: #00d084;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+#page-signal-ea .workflow {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+#page-signal-ea .workflow-step {
+            text-align: center;
+            background: #0b1013;
+            border: 1px solid #182126;
+            border-radius: 12px;
+            padding: 25px 15px;
+        }
+#page-signal-ea .workflow-number {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: #00d084;
+            color: #050708;
+            font-weight: 800;
+        }
+#page-signal-ea .workflow-step h3 {
+            margin-bottom: 8px;
+        }
+#page-signal-ea .workflow-step p {
+            color: #9ca6af;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+#page-signal-ea .signal-dashboard {
+            max-width: 900px;
+            margin: auto;
+            background: #080d10;
+            border: 1px solid #1b292e;
+            border-radius: 14px;
+            padding: 30px;
+        }
+#page-signal-ea .dashboard-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid #1b292e;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+#page-signal-ea .dashboard-title h3 {
+            margin: 0;
+        }
+#page-signal-ea .status {
+            color: #00d084;
+            font-size: 14px;
+            font-weight: 700;
+        }
+#page-signal-ea .signal-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+#page-signal-ea .signal-box {
+            background: #0d1418;
+            border: 1px solid #1a272c;
+            border-radius: 10px;
+            padding: 20px;
+        }
+#page-signal-ea .signal-box small {
+            display: block;
+            color: #7f8a92;
+            margin-bottom: 8px;
+        }
+#page-signal-ea .signal-box strong {
+            font-size: 20px;
+        }
+#page-signal-ea .buy-text {
+            color: #00d084;
+        }
+#page-signal-ea .sell-text {
+            color: #ff5c5c;
+        }
+#page-signal-ea .confidence {
+            color: #00d084;
+        }
+#page-signal-ea .warning-box {
+            max-width: 900px;
+            margin: 40px auto 0;
+            padding: 20px;
+            border: 1px solid #3a2f17;
+            background: #171209;
+            border-radius: 10px;
+            color: #c5b995;
+            line-height: 1.7;
+        }
+#page-signal-ea .product-cta {
+            text-align: center;
+            padding: 90px 20px;
+            background:
+                radial-gradient(circle at center,
+                rgba(0, 208, 132, 0.12),
+                transparent 50%);
+        }
+#page-signal-ea .product-cta h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+#page-signal-ea .product-cta p {
+            color: #9ca6af;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.7;
+        }
+@media (max-width: 900px) {#page-signal-ea .product-grid {
+                grid-template-columns: 1fr;
+            }
+#page-signal-ea .workflow {
+                grid-template-columns: repeat(2, 1fr);
+            }
+#page-signal-ea .signal-list {
+                grid-template-columns: 1fr;
+            }
+#page-signal-ea .product-hero h1 {
+                font-size: 42px;
+            }}
+@media (max-width: 600px) {#page-signal-ea .workflow {
+                grid-template-columns: 1fr;
+            }
+#page-signal-ea .signal-row {
+                grid-template-columns: 1fr;
+            }
+#page-signal-ea .product-hero {
+                padding: 70px 20px;
+            }
+#page-signal-ea .product-section {
+                padding: 60px 20px;
+            }
+#page-signal-ea .product-cta h2 {
+                font-size: 32px;
+            }}
+/* ===== sniper-ea.html ===== */
+#page-sniper-ea /* ================= PRODUCT BUTTONS ================= */
+
+        .product-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+#page-sniper-ea .product-btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+            border: 1px solid #00d084;
+            cursor: pointer;
+        }
+#page-sniper-ea .download-btn {
+            background: #00d084;
+            color: #050708;
+        }
+#page-sniper-ea .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(0, 208, 132, 0.35);
+        }
+#page-sniper-ea .demo-btn {
+            background: transparent;
+            color: #00d084;
+        }
+#page-sniper-ea .demo-btn:hover {
+            background: #00d084;
+            color: #050708;
+            transform: translateY(-3px);
+        }
+#page-sniper-ea .buy-btn {
+            background: #ffffff;
+            color: #050708;
+            border-color: #ffffff;
+        }
+#page-sniper-ea .buy-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(255,255,255,0.20);
+        }
+#page-sniper-ea .product-note {
+            margin-top: 18px;
+            color: #888;
+            font-size: 14px;
+        }
+#page-sniper-ea .product-price {
+            font-size: 28px;
+            font-weight: 800;
+            color: #00d084;
+            margin-top: 15px;
+        }
+#page-sniper-ea .feature-card ul {
+            padding-left: 20px;
+        }
+#page-sniper-ea .feature-card li {
+            margin-bottom: 8px;
+            color: #bbb;
+        }
+#page-sniper-ea .step-number {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: #00d084;
+            color: #050708;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+@media (max-width: 600px) {#page-sniper-ea .product-buttons {
+                flex-direction: column;
+            }
+#page-sniper-ea .product-btn {
+                width: 85%;
+                text-align: center;
+            }}
+/* ===== videos.html ===== */
+#page-videos .video-hero {
+            min-height: 65vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            background:
+                radial-gradient(circle at center, rgba(0,208,132,0.12), transparent 55%),
+                #050708;
+        }
+#page-videos .video-hero-content {
+            max-width: 850px;
+        }
+#page-videos .video-hero h1 {
+            font-size: 58px;
+            margin-bottom: 20px;
+        }
+#page-videos .video-hero h1 span {
+            color: #00d084;
+        }
+#page-videos .video-hero p {
+            color: #9ca3af;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+#page-videos .academy-section {
+            padding: 90px 7%;
+        }
+#page-videos .academy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 45px;
+        }
+#page-videos .academy-card {
+            background: #0b0f11;
+            border: 1px solid #182126;
+            border-radius: 14px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+#page-videos .academy-card:hover {
+            transform: translateY(-6px);
+            border-color: #00d084;
+        }
+#page-videos .video-preview {
+            height: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                linear-gradient(135deg, #0d1518, #07100e);
+            border-bottom: 1px solid #182126;
+            color: #00d084;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+#page-videos .video-play {
+            width: 58px;
+            height: 58px;
+            border: 2px solid #00d084;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 22px;
+        }
+#page-videos .academy-content {
+            padding: 25px;
+        }
+#page-videos .academy-tag {
+            display: inline-block;
+            font-size: 12px;
+            color: #00d084;
+            border: 1px solid #00d084;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+#page-videos .academy-content h3 {
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+#page-videos .academy-content p {
+            color: #9ca3af;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+#page-videos .lesson-btn {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            background: #00d084;
+            color: #03100a;
+            padding: 12px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+#page-videos .lesson-btn:hover {
+            opacity: 0.85;
+        }
+#page-videos .categories {
+            padding: 0 7% 80px;
+        }
+#page-videos .category-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+#page-videos .category-card {
+            padding: 22px;
+            background: #0b0f11;
+            border: 1px solid #182126;
+            border-radius: 10px;
+            text-align: center;
+        }
+#page-videos .category-card h3 {
+            font-size: 16px;
+        }
+#page-videos .coming-soon {
+            margin: 20px 7% 80px;
+            padding: 35px;
+            text-align: center;
+            background: #09110e;
+            border: 1px solid #00d084;
+            border-radius: 14px;
+        }
+#page-videos .coming-soon h2 {
+            color: #00d084;
+            margin-bottom: 10px;
+        }
+#page-videos .coming-soon p {
+            color: #9ca3af;
+        }
+@media (max-width: 900px) {#page-videos .academy-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+#page-videos .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+#page-videos .video-hero h1 {
+                font-size: 42px;
+            }}
+@media (max-width: 600px) {#page-videos .academy-grid {
+                grid-template-columns: 1fr;
+            }
+#page-videos .category-grid {
+                grid-template-columns: 1fr;
+            }
+#page-videos .video-hero h1 {
+                font-size: 34px;
+            }}
+/* ===== login.html ===== */
+#page-login .auth-section {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            background:
+                radial-gradient(circle at top right, rgba(0,208,132,0.10), transparent 35%),
+                #050708;
+        }
+#page-login .auth-box {
+            width: 100%;
+            max-width: 460px;
+            background: #0b1012;
+            border: 1px solid #1c292d;
+            border-radius: 18px;
+            padding: 38px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+        }
+#page-login .auth-logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+#page-login .auth-logo h1 {
+            margin: 0;
+            color: #00d084;
+            font-size: 30px;
+        }
+#page-login .auth-logo p {
+            margin-top: 8px;
+            color: #8d9a9f;
+        }
+#page-login .auth-form {
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+        }
+#page-login .auth-form label {
+            color: #dce4e7;
+            font-size: 14px;
+            font-weight: 600;
+        }
+#page-login .auth-form input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 14px 15px;
+            margin-top: 7px;
+            border-radius: 10px;
+            border: 1px solid #26353a;
+            background: #06090a;
+            color: white;
+            outline: none;
+            font-size: 15px;
+        }
+#page-login .auth-form input:focus {
+            border-color: #00d084;
+            box-shadow: 0 0 0 2px rgba(0,208,132,0.10);
+        }
+#page-login .remember-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+        }
+#page-login .remember {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #9ca9ad;
+        }
+#page-login .remember input {
+            width: auto;
+            margin: 0;
+        }
+#page-login .forgot {
+            color: #00d084;
+            cursor: pointer;
+        }
+#page-login .auth-button {
+            border: none;
+            background: #00d084;
+            color: #04100b;
+            padding: 14px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+#page-login .auth-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,208,132,0.20);
+        }
+#page-login .auth-message {
+            display: none;
+            padding: 12px;
+            border-radius: 9px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+#page-login .auth-message.error {
+            display: block;
+            background: rgba(255,70,70,0.08);
+            border: 1px solid rgba(255,70,70,0.25);
+            color: #ff8f8f;
+        }
+#page-login .auth-message.success {
+            display: block;
+            background: rgba(0,208,132,0.08);
+            border: 1px solid rgba(0,208,132,0.25);
+            color: #69e9b0;
+        }
+#page-login .auth-links {
+            text-align: center;
+            margin-top: 22px;
+            color: #879397;
+            font-size: 14px;
+        }
+#page-login .auth-links a {
+            color: #00d084;
+            text-decoration: none;
+            font-weight: 700;
+        }
+#page-login .security-note {
+            margin-top: 25px;
+            padding: 14px;
+            border-radius: 10px;
+            background: #080d0f;
+            border: 1px solid #172226;
+            color: #7f8c90;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+#page-login .back-home {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #89969a;
+            text-decoration: none;
+            font-size: 13px;
+        }
+#page-login .back-home:hover {
+            color: #00d084;
+        }
+@media (max-width: 600px) {#page-login .auth-box {
+                padding: 25px 20px;
+            }}
+/* ===== register.html ===== */
+#page-register .auth-section {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+
+            background:
+                radial-gradient(circle at top left, rgba(0,208,132,0.10), transparent 35%),
+                #050708;
+        }
+#page-register .auth-box {
+            width: 100%;
+            max-width: 500px;
+
+            background: #0b1012;
+            border: 1px solid #1c292d;
+
+            border-radius: 18px;
+            padding: 38px;
+
+            box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+        }
+#page-register .auth-logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+#page-register .auth-logo h1 {
+            margin: 0;
+            color: #00d084;
+            font-size: 30px;
+        }
+#page-register .auth-logo p {
+            margin-top: 8px;
+            color: #8d9a9f;
+        }
+#page-register .auth-form {
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+        }
+#page-register .auth-form label {
+            color: #dce4e7;
+            font-size: 14px;
+            font-weight: 600;
+        }
+#page-register .auth-form input {
+            width: 100%;
+            box-sizing: border-box;
+
+            padding: 14px 15px;
+            margin-top: 7px;
+
+            border-radius: 10px;
+            border: 1px solid #26353a;
+
+            background: #06090a;
+            color: white;
+
+            outline: none;
+            font-size: 15px;
+        }
+#page-register .auth-form input:focus {
+            border-color: #00d084;
+            box-shadow: 0 0 0 2px rgba(0,208,132,0.10);
+        }
+#page-register .terms {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+
+            color: #8e9b9f;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+#page-register .terms input {
+            width: auto;
+            margin-top: 3px;
+        }
+#page-register .terms a {
+            color: #00d084;
+            text-decoration: none;
+        }
+#page-register .auth-button {
+            border: none;
+
+            background: #00d084;
+            color: #04100b;
+
+            padding: 14px;
+            border-radius: 10px;
+
+            font-size: 16px;
+            font-weight: 800;
+
+            cursor: pointer;
+
+            transition: 0.25s;
+        }
+#page-register .auth-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,208,132,0.20);
+        }
+#page-register .auth-message {
+            display: none;
+
+            padding: 12px;
+            border-radius: 9px;
+
+            font-size: 14px;
+            line-height: 1.5;
+        }
+#page-register .auth-message.error {
+            display: block;
+
+            background: rgba(255,70,70,0.08);
+            border: 1px solid rgba(255,70,70,0.25);
+
+            color: #ff8f8f;
+        }
+#page-register .auth-message.success {
+            display: block;
+
+            background: rgba(0,208,132,0.08);
+            border: 1px solid rgba(0,208,132,0.25);
+
+            color: #69e9b0;
+        }
+#page-register .auth-links {
+            text-align: center;
+
+            margin-top: 22px;
+
+            color: #879397;
+            font-size: 14px;
+        }
+#page-register .auth-links a {
+            color: #00d084;
+            text-decoration: none;
+            font-weight: 700;
+        }
+#page-register .security-note {
+            margin-top: 25px;
+
+            padding: 14px;
+
+            border-radius: 10px;
+
+            background: #080d0f;
+            border: 1px solid #172226;
+
+            color: #7f8c90;
+
+            font-size: 12px;
+            line-height: 1.6;
+        }
+#page-register .back-home {
+            display: block;
+
+            text-align: center;
+
+            margin-top: 20px;
+
+            color: #89969a;
+
+            text-decoration: none;
+
+            font-size: 13px;
+        }
+#page-register .back-home:hover {
+            color: #00d084;
+        }
+@media (max-width: 600px) {#page-register .auth-box {
+                padding: 25px 20px;
+            }}
+/* ===== dashboard.html ===== */
+#page-dashboard .dashboard-section {
+
+            min-height: calc(100vh - 80px);
+
+            padding: 60px 20px;
+
+            background:
+                radial-gradient(
+                    circle at top right,
+                    rgba(0,208,132,0.08),
+                    transparent 35%
+                ),
+                #050708;
+
+        }
+#page-dashboard .dashboard-container {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+        }
+#page-dashboard .dashboard-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            margin-bottom: 35px;
+
+        }
+#page-dashboard .dashboard-header h1 {
+
+            margin: 0;
+
+            color: white;
+
+            font-size: 34px;
+
+        }
+#page-dashboard .dashboard-header p {
+
+            color: #89969a;
+
+            margin-top: 8px;
+
+        }
+#page-dashboard .logout-btn {
+
+            border: 1px solid #26353a;
+
+            background: #0b1012;
+
+            color: #ff7777;
+
+            padding: 11px 18px;
+
+            border-radius: 9px;
+
+            cursor: pointer;
+
+            font-weight: 700;
+
+        }
+#page-dashboard .logout-btn:hover {
+
+            border-color: #ff7777;
+
+        }
+#page-dashboard .user-card {
+
+            background: #0b1012;
+
+            border: 1px solid #1b292d;
+
+            border-radius: 15px;
+
+            padding: 22px;
+
+            margin-bottom: 30px;
+
+        }
+#page-dashboard .user-card h3 {
+
+            margin-top: 0;
+
+            color: #00d084;
+
+        }
+#page-dashboard .user-info {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 30px;
+
+        }
+#page-dashboard .user-info div {
+
+            color: #9ba7ab;
+
+        }
+#page-dashboard .user-info strong {
+
+            color: white;
+
+        }
+#page-dashboard .dashboard-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 18px;
+
+            margin-bottom: 35px;
+
+        }
+#page-dashboard .stat-card {
+
+            background: #0b1012;
+
+            border: 1px solid #1b292d;
+
+            border-radius: 15px;
+
+            padding: 25px;
+
+        }
+#page-dashboard .stat-card h2 {
+
+            margin: 0;
+
+            color: #00d084;
+
+            font-size: 32px;
+
+        }
+#page-dashboard .stat-card p {
+
+            color: #89969a;
+
+            margin-bottom: 0;
+
+        }
+#page-dashboard .section-title {
+
+            margin: 45px 0 20px;
+
+        }
+#page-dashboard .section-title h2 {
+
+            margin-bottom: 6px;
+
+            color: white;
+
+        }
+#page-dashboard .section-title p {
+
+            color: #7f8c90;
+
+        }
+#page-dashboard .quick-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 18px;
+
+        }
+#page-dashboard .quick-card {
+
+            background: #0b1012;
+
+            border: 1px solid #1b292d;
+
+            border-radius: 15px;
+
+            padding: 25px;
+
+            transition: 0.25s;
+
+        }
+#page-dashboard .quick-card:hover {
+
+            transform: translateY(-4px);
+
+            border-color: #00d084;
+
+        }
+#page-dashboard .quick-card h3 {
+
+            color: white;
+
+            margin-top: 0;
+
+        }
+#page-dashboard .quick-card p {
+
+            color: #89969a;
+
+            line-height: 1.6;
+
+        }
+#page-dashboard .quick-card a {
+
+            display: inline-block;
+
+            margin-top: 10px;
+
+            color: #00d084;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+        }
+#page-dashboard .bots-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+#page-dashboard .bot-card {
+
+            background: #0b1012;
+
+            border: 1px solid #1b292d;
+
+            border-radius: 15px;
+
+            padding: 25px;
+
+        }
+#page-dashboard .bot-card h3 {
+
+            color: #00d084;
+
+            margin-top: 0;
+
+        }
+#page-dashboard .bot-card p {
+
+            color: #89969a;
+
+            line-height: 1.6;
+
+        }
+#page-dashboard .bot-card a {
+
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 10px 15px;
+
+            border-radius: 8px;
+
+            background: #00d084;
+
+            color: #04100b;
+
+            text-decoration: none;
+
+            font-weight: 800;
+
+        }
+#page-dashboard .membership-card {
+
+            margin-top: 30px;
+
+            padding: 30px;
+
+            border-radius: 16px;
+
+            border: 1px solid #1b292d;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0b1012,
+                    #081511
+                );
+
+        }
+#page-dashboard .membership-card h2 {
+
+            color: white;
+
+            margin-top: 0;
+
+        }
+#page-dashboard .membership-card p {
+
+            color: #89969a;
+
+        }
+#page-dashboard .membership-card a {
+
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 12px 18px;
+
+            border-radius: 9px;
+
+            background: #00d084;
+
+            color: #04100b;
+
+            text-decoration: none;
+
+            font-weight: 800;
+
+        }
+#page-dashboard .dashboard-notice {
+
+            margin-top: 30px;
+
+            padding: 16px;
+
+            border-radius: 10px;
+
+            background: #080d0f;
+
+            border: 1px solid #172226;
+
+            color: #7f8c90;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+
+        }
+@media (max-width: 900px) {#page-dashboard .dashboard-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+#page-dashboard .quick-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+#page-dashboard .bots-grid {
+
+                grid-template-columns: 1fr;
+
+            }}
+@media (max-width: 600px) {#page-dashboard .dashboard-header {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+            }
+#page-dashboard .dashboard-grid, #page-dashboard .quick-grid {
+
+                grid-template-columns: 1fr;
+
+            }}
+/* ===== membership.html ===== */
+#page-membership /* =========================================
+           AHR TRADERS MEMBERSHIP PAGE
+        ========================================= */
+
+        .membership-page {
+            padding: 90px 20px;
+            background:
+                radial-gradient(circle at top center, rgba(0, 208, 132, 0.08), transparent 35%);
+        }
+#page-membership .membership-hero {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+#page-membership .membership-hero h1 {
+            font-size: 44px;
+            margin-bottom: 15px;
+        }
+#page-membership .membership-hero h1 span {
+            color: #00d084;
+        }
+#page-membership .membership-hero p {
+            color: #8f9a9c;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+#page-membership /* =========================================
+           PRICING GRID
+        ========================================= */
+
+        .pricing-grid {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            align-items: stretch;
+        }
+#page-membership .pricing-card {
+            position: relative;
+            background: #0b1012;
+            border: 1px solid #202a2d;
+            border-radius: 18px;
+            padding: 35px 28px;
+            transition: 0.25s ease;
+        }
+#page-membership .pricing-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(0, 208, 132, 0.5);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+        }
+#page-membership .pricing-card.featured {
+            border-color: #00d084;
+            box-shadow: 0 0 35px rgba(0, 208, 132, 0.08);
+        }
+#page-membership .popular-badge {
+            position: absolute;
+            top: -13px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #00d084;
+            color: #03100a;
+            padding: 7px 18px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+#page-membership .plan-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+#page-membership .plan-description {
+            color: #8f9a9c;
+            font-size: 14px;
+            min-height: 42px;
+            line-height: 1.5;
+        }
+#page-membership .plan-price {
+            margin: 25px 0;
+            font-size: 34px;
+            font-weight: bold;
+        }
+#page-membership .plan-price span {
+            color: #8f9a9c;
+            font-size: 14px;
+            font-weight: normal;
+        }
+#page-membership .plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+#page-membership .plan-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: #c8d0d1;
+            font-size: 14px;
+        }
+#page-membership .plan-features li:last-child {
+            border-bottom: none;
+        }
+#page-membership .check {
+            color: #00d084;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+#page-membership .locked {
+            color: #667174;
+            margin-right: 8px;
+        }
+#page-membership .plan-btn {
+            width: 100%;
+            padding: 14px;
+            border-radius: 9px;
+            border: 1px solid #00d084;
+            background: transparent;
+            color: #00d084;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+#page-membership .plan-btn:hover {
+            background: #00d084;
+            color: #04100b;
+        }
+#page-membership .featured .plan-btn {
+            background: #00d084;
+            color: #04100b;
+        }
+#page-membership .featured .plan-btn:hover {
+            box-shadow: 0 8px 25px rgba(0, 208, 132, 0.2);
+        }
+#page-membership /* =========================================
+           BENEFITS
+        ========================================= */
+
+        .membership-benefits {
+            max-width: 1100px;
+            margin: 90px auto 0;
+        }
+#page-membership .membership-benefits h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 40px;
+        }
+#page-membership .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+#page-membership .benefit-card {
+            background: #0b1012;
+            border: 1px solid #202a2d;
+            border-radius: 14px;
+            padding: 25px 20px;
+            text-align: center;
+        }
+#page-membership .benefit-icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+#page-membership .benefit-card h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+#page-membership .benefit-card p {
+            color: #8f9a9c;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+#page-membership /* =========================================
+           COMPARISON
+        ========================================= */
+
+        .comparison-section {
+            max-width: 1000px;
+            margin: 90px auto 0;
+        }
+#page-membership .comparison-section h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+#page-membership .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #0b1012;
+        }
+#page-membership .comparison-table th, #page-membership .comparison-table td {
+            padding: 15px;
+            border: 1px solid #202a2d;
+            text-align: center;
+            font-size: 14px;
+        }
+#page-membership .comparison-table th {
+            color: #00d084;
+            background: #091012;
+        }
+#page-membership .comparison-table td:first-child {
+            text-align: left;
+            color: #d7dede;
+        }
+#page-membership .yes {
+            color: #00d084;
+            font-weight: bold;
+        }
+#page-membership .no {
+            color: #626d70;
+        }
+#page-membership /* =========================================
+           NOTE
+        ========================================= */
+
+        .membership-note {
+            max-width: 800px;
+            margin: 60px auto 0;
+            padding: 20px;
+            border: 1px solid rgba(0, 208, 132, 0.15);
+            background: rgba(0, 208, 132, 0.04);
+            border-radius: 12px;
+            text-align: center;
+            color: #8f9a9c;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+#page-membership /* =========================================
+           CTA
+        ========================================= */
+
+        .membership-cta {
+            text-align: center;
+            margin-top: 80px;
+        }
+#page-membership .membership-cta h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+#page-membership .membership-cta p {
+            color: #8f9a9c;
+            margin-bottom: 25px;
+        }
+#page-membership .membership-cta a {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 8px;
+            background: #00d084;
+            color: #04100b;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+#page-membership /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+
+            .benefit-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+@media (max-width: 600px) {#page-membership .membership-page {
+                padding: 60px 15px;
+            }
+#page-membership .membership-hero h1 {
+                font-size: 32px;
+            }
+#page-membership .benefit-grid {
+                grid-template-columns: 1fr;
+            }
+#page-membership .comparison-section {
+                overflow-x: auto;
+            }
+#page-membership .comparison-table {
+                min-width: 650px;
+            }}
+</style>
+</head>
+<body>
+<div class="page" id="page-index" style="display:block;">
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <span>AHR</span> TRADERS
+    </div>
+
+    <nav class="nav-links">
+
+        <a href="index.html" class="active">Home</a>
+
+        <a href="bots.html">Trading Bots</a>
+
+        <a href="strategies.html">Strategies</a>
+
+        <a href="videos.html">Videos</a>
+
+        <a href="tools.html">Tools</a>
+
+        <a href="membership.html">Membership</a>
+
+        <a href="#contact">Contact</a>
+
+        <a href="login.html" class="login-btn">
+            Login
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     HERO SECTION
+========================================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="hero-small">
+            PROFESSIONAL TRADING PLATFORM
+        </p>
+
+        <h1>
+            AHR <span>TRADERS</span>
+        </h1>
+
+        <h2>
+            Trade Smarter.<br>
+            Trade With Confidence.
+        </h2>
+
+        <p>
+            Professional trading bots, strategies, indicators,
+            education and tools designed for modern traders.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="bots.html" class="bot-btn">
+                Explore Trading Bots
+            </a>
+
+            <a href="strategies.html" class="bot-btn">
+                Explore Strategies
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FEATURES
+========================================================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <p>WHAT WE OFFER</p>
+
+        <h2>
+            Everything You Need To Trade Better
+        </h2>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🤖
+            </div>
+
+            <h3>
+                Trading Bots
+            </h3>
+
+            <p>
+                Advanced MT5 trading systems designed
+                for structured market analysis and execution.
+            </p>
+
+            <a href="bots.html">
+                Explore Bots →
+            </a>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📊
+            </div>
+
+            <h3>
+                Trading Strategies
+            </h3>
+
+            <p>
+                Learn price action, liquidity,
+                market structure and professional execution.
+            </p>
+
+            <a href="strategies.html">
+                Explore Strategies →
+            </a>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🎥
+            </div>
+
+            <h3>
+                Video Academy
+            </h3>
+
+            <p>
+                Step-by-step trading education for
+                beginners and developing traders.
+            </p>
+
+            <a href="videos.html">
+                Watch Academy →
+            </a>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🛠️
+            </div>
+
+            <h3>
+                Trading Tools
+            </h3>
+
+            <p>
+                Indicators, calculators, market tools
+                and resources for better decision making.
+            </p>
+
+            <a href="tools.html">
+                Explore Tools →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TRADING BOTS
+========================================================= -->
+
+<section class="section dark-section">
+
+    <div class="section-title">
+
+        <p>AHR TRADERS SYSTEMS</p>
+
+        <h2>
+            Professional Trading Bots
+        </h2>
+
+    </div>
+
+
+    <div class="bot-grid">
+
+
+        <!-- SNIPER EA -->
+
+        <div class="bot-card">
+
+            <div class="bot-badge">
+                PREMIUM
+            </div>
+
+            <h3>
+                AHR Sniper EA
+            </h3>
+
+            <p>
+                Multi-timeframe trading system using
+                trend, momentum, support/resistance
+                and price-action confirmation.
+            </p>
+
+            <ul>
+
+                <li>✓ M15 / M5 / M1 Analysis</li>
+
+                <li>✓ EMA Trend Filter</li>
+
+                <li>✓ RSI Confirmation</li>
+
+                <li>✓ ADX Momentum Filter</li>
+
+                <li>✓ S/R Analysis</li>
+
+            </ul>
+
+            <a href="sniper-ea.html" class="bot-btn">
+                View Sniper EA
+            </a>
+
+        </div>
+
+
+        <!-- GOLD HUNTER -->
+
+        <div class="bot-card">
+
+            <div class="bot-badge">
+                GOLD
+            </div>
+
+            <h3>
+                AHR Gold Hunter
+            </h3>
+
+            <p>
+                Gold-focused trading system designed
+                specifically for XAUUSD market analysis.
+            </p>
+
+            <ul>
+
+                <li>✓ XAUUSD Focus</li>
+
+                <li>✓ Market Structure</li>
+
+                <li>✓ Momentum Analysis</li>
+
+                <li>✓ S/R Zones</li>
+
+                <li>✓ Session Analysis</li>
+
+            </ul>
+
+            <a href="gold-hunter.html" class="bot-btn">
+                View Gold Hunter
+            </a>
+
+        </div>
+
+
+        <!-- SIGNAL EA -->
+
+        <div class="bot-card">
+
+            <div class="bot-badge">
+                SIGNAL
+            </div>
+
+            <h3>
+                AHR Signal EA
+            </h3>
+
+            <p>
+                Signal-only analysis system designed
+                to identify high-quality BUY and SELL
+                opportunities.
+            </p>
+
+            <ul>
+
+                <li>✓ BUY / SELL Signals</li>
+
+                <li>✓ EMA Confirmation</li>
+
+                <li>✓ RSI + ADX</li>
+
+                <li>✓ Momentum</li>
+
+                <li>✓ HTF Trend</li>
+
+            </ul>
+
+            <a href="signal-ea.html" class="bot-btn">
+                View Signal EA
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="center-button">
+
+        <a href="bots.html" class="bot-btn">
+            View All Trading Bots
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     STRATEGIES
+========================================================= -->
+
+<section class="section" id="home-strategies-section">
+
+    <div class="section-title">
+
+        <p>TRADING EDUCATION</p>
+
+        <h2>
+            Professional Trading Strategies
+        </h2>
+
+    </div>
+
+
+    <div class="strategy-grid">
+
+
+        <div class="strategy-card">
+
+            <h3>
+                Price Action
+            </h3>
+
+            <p>
+                Understand market movement through
+                candles, structure and price behavior.
+            </p>
+
+            <a href="strategies.html">
+                Learn More →
+            </a>
+
+        </div>
+
+
+        <div class="strategy-card">
+
+            <h3>
+                Liquidity Trading
+            </h3>
+
+            <p>
+                Study liquidity areas, sweeps,
+                equal highs, equal lows and reactions.
+            </p>
+
+            <a href="strategies.html">
+                Learn More →
+            </a>
+
+        </div>
+
+
+        <div class="strategy-card">
+
+            <h3>
+                Sniper Scalping
+            </h3>
+
+            <p>
+                Lower-timeframe entry concepts with
+                structured confirmation.
+            </p>
+
+            <a href="strategies.html">
+                Learn More →
+            </a>
+
+        </div>
+
+
+        <div class="strategy-card">
+
+            <h3>
+                Market Structure
+            </h3>
+
+            <p>
+                Learn swing highs, swing lows,
+                BOS, CHOCH and trend development.
+            </p>
+
+            <a href="strategies.html">
+                Learn More →
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="center-button">
+
+        <a href="strategies.html" class="bot-btn">
+            View All Strategies
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     VIDEO ACADEMY
+========================================================= -->
+
+<section class="section dark-section" id="videos">
+
+    <div class="section-title">
+
+        <p>LEARN TRADING</p>
+
+        <h2>
+            AHR TRADERS Video Academy
+        </h2>
+
+    </div>
+
+
+    <div class="video-grid">
+
+
+        <div class="video-card">
+
+            <div class="video-placeholder">
+                ▶
+            </div>
+
+            <h3>
+                Forex Trading Basics
+            </h3>
+
+            <p>
+                Learn the basic concepts of forex trading.
+            </p>
+
+        </div>
+
+
+        <div class="video-card">
+
+            <div class="video-placeholder">
+                ▶
+            </div>
+
+            <h3>
+                Price Action Fundamentals
+            </h3>
+
+            <p>
+                Understand candles and market movement.
+            </p>
+
+        </div>
+
+
+        <div class="video-card">
+
+            <div class="video-placeholder">
+                ▶
+            </div>
+
+            <h3>
+                Liquidity & Market Structure
+            </h3>
+
+            <p>
+                Learn how liquidity and structure interact.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="center-button">
+
+        <a href="videos.html" class="bot-btn">
+            View Video Academy
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TOOLS
+========================================================= -->
+
+<section class="section" id="home-tools-section">
+
+    <div class="section-title">
+
+        <p>TRADING TECHNOLOGY</p>
+
+        <h2>
+            Professional Trading Tools
+        </h2>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📈
+            </div>
+
+            <h3>
+                Market Analysis
+            </h3>
+
+            <p>
+                Tools for analyzing market direction,
+                structure and momentum.
+            </p>
+
+            <a href="tools.html">
+                Explore →
+            </a>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📊
+            </div>
+
+            <h3>
+                Indicators
+            </h3>
+
+            <p>
+                Custom TradingView and MT5 indicators
+                for structured analysis.
+            </p>
+
+            <a href="tools.html">
+                Explore →
+            </a>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🗓️
+            </div>
+
+            <h3>
+                Economic Calendar
+            </h3>
+
+            <p>
+                Track important economic events and
+                major market news.
+            </p>
+
+            <a href="tools.html">
+                Explore →
+            </a>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🧮
+            </div>
+
+            <h3>
+                Trading Calculators
+            </h3>
+
+            <p>
+                Risk, position size, profit and
+                risk/reward calculation tools.
+            </p>
+
+            <a href="tools.html">
+                Explore →
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="center-button">
+
+        <a href="tools.html" class="bot-btn">
+            Explore All Trading Tools
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MEMBERSHIP
+========================================================= -->
+
+<section class="section dark-section">
+
+    <div class="section-title">
+
+        <p>MEMBERSHIP</p>
+
+        <h2>
+            Choose Your Trading Access
+        </h2>
+
+        <p>
+            Start free and upgrade when you're ready.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🆓
+            </div>
+
+            <h3>
+                FREE
+            </h3>
+
+            <p>
+                Access beginner strategies,
+                educational resources and dashboard.
+            </p>
+
+            <a href="membership.html">
+                View Membership →
+            </a>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                ⭐
+            </div>
+
+            <h3>
+                PREMIUM
+            </h3>
+
+            <p>
+                Advanced strategies, premium education
+                and advanced trading tools.
+            </p>
+
+            <a href="membership.html">
+                View Premium →
+            </a>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🚀
+            </div>
+
+            <h3>
+                PRO
+            </h3>
+
+            <p>
+                Full access to premium bots,
+                advanced tools and academy resources.
+            </p>
+
+            <a href="membership.html">
+                View Pro →
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="center-button">
+
+        <a href="membership.html" class="bot-btn">
+            View Membership Plans
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section class="section" id="contact">
+
+    <div class="section-title">
+
+        <p>GET IN TOUCH</p>
+
+        <h2>
+            Contact AHR TRADERS
+        </h2>
+
+        <p>
+            Have a question about our trading systems,
+            strategies or membership?
+        </p>
+
+    </div>
+
+
+    <div class="contact-box">
+
+        <h3>
+            AHR TRADERS
+        </h3>
+
+        <p>
+            Professional Trading Systems & Education
+        </p>
+
+        <p>
+            Email: support@ahrtraders.com
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta">
+
+    <div>
+
+        <h2>
+            Ready To Trade Smarter?
+        </h2>
+
+        <p>
+            Explore our trading systems and educational resources.
+        </p>
+
+        <button onclick="window.location.href='bots.html'">
+            Explore AHR TRADERS
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <h3>
+                AHR TRADERS
+            </h3>
+
+            <p>
+                Smart Trading. Better Decisions.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="bots.html">
+                Trading Bots
+            </a>
+
+            <a href="strategies.html">
+                Strategies
+            </a>
+
+            <a href="videos.html">
+                Videos
+            </a>
+
+            <a href="tools.html">
+                Tools
+            </a>
+
+            <a href="membership.html">
+                Membership
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a href="register.html">
+                Register
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Trading Systems
+            </h4>
+
+            <a href="sniper-ea.html">
+                AHR Sniper EA
+            </a>
+
+            <a href="gold-hunter.html">
+                AHR Gold Hunter
+            </a>
+
+            <a href="signal-ea.html">
+                AHR Signal EA
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 AHR TRADERS. All Rights Reserved.
+        </p>
+
+        <p>
+            Trading involves risk. No strategy guarantees profits.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+
+
+
+</div>
+<div class="page" id="page-bots" style="display:none;">
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <span>AHR</span> TRADERS
+    </div>
+
+    <nav class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="bots.html" class="active">
+            Trading Bots
+        </a>
+
+        <a href="strategies.html">
+            Strategies
+        </a>
+
+        <a href="videos.html">
+            Videos
+        </a>
+
+        <a href="tools.html">
+            Tools
+        </a>
+
+        <a href="membership.html">
+            Membership
+        </a>
+
+        <a href="index.html#contact">
+            Contact
+        </a>
+
+        <a href="login.html" class="login-btn">
+            Login
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="hero-small">
+            AHR TRADERS AUTOMATED SYSTEMS
+        </p>
+
+        <h1>
+            Professional <span>Trading Bots</span>
+        </h1>
+
+        <h2>
+            Automated Analysis.<br>
+            Structured Execution.
+        </h2>
+
+        <p>
+            Explore AHR TRADERS trading systems designed
+            to help traders analyze the market with a
+            structured and systematic approach.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="sniper-ea.html" class="bot-btn">
+                AHR Sniper EA
+            </a>
+
+            <a href="gold-hunter.html" class="bot-btn">
+                AHR Gold Hunter
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     BOTS
+========================================================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <p>
+            AHR TRADERS PRODUCTS
+        </p>
+
+        <h2>
+            Choose Your Trading System
+        </h2>
+
+    </div>
+
+
+    <div class="bot-grid">
+
+
+        <!-- =================================================
+             SNIPER EA
+        ================================================== -->
+
+        <div class="bot-card">
+
+            <div class="bot-badge">
+                PREMIUM
+            </div>
+
+            <h3>
+                AHR Sniper EA
+            </h3>
+
+            <p>
+                A multi-timeframe trading system designed
+                to analyze trend, momentum, support/resistance
+                and price action before identifying potential
+                setups.
+            </p>
+
+            <ul>
+
+                <li>
+                    ✓ M15 Trend Analysis
+                </li>
+
+                <li>
+                    ✓ M5 Confirmation
+                </li>
+
+                <li>
+                    ✓ M1 Entry Analysis
+                </li>
+
+                <li>
+                    ✓ EMA Trend Filter
+                </li>
+
+                <li>
+                    ✓ RSI Confirmation
+                </li>
+
+                <li>
+                    ✓ ADX Momentum Filter
+                </li>
+
+                <li>
+                    ✓ Support / Resistance
+                </li>
+
+                <li>
+                    ✓ Spread Filter
+                </li>
+
+            </ul>
+
+            <a href="sniper-ea.html" class="bot-btn">
+                View AHR Sniper EA
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             GOLD HUNTER
+        ================================================== -->
+
+        <div class="bot-card">
+
+            <div class="bot-badge">
+                GOLD
+            </div>
+
+            <h3>
+                AHR Gold Hunter
+            </h3>
+
+            <p>
+                A gold-focused trading system designed
+                specifically for XAUUSD analysis, trend
+                detection, momentum and structured setups.
+            </p>
+
+            <ul>
+
+                <li>
+                    ✓ XAUUSD Focus
+                </li>
+
+                <li>
+                    ✓ Market Structure
+                </li>
+
+                <li>
+                    ✓ Trend Detection
+                </li>
+
+                <li>
+                    ✓ Momentum Analysis
+                </li>
+
+                <li>
+                    ✓ Support / Resistance
+                </li>
+
+                <li>
+                    ✓ Price Action
+                </li>
+
+                <li>
+                    ✓ Session Analysis
+                </li>
+
+                <li>
+                    ✓ Risk Management
+                </li>
+
+            </ul>
+
+            <a href="gold-hunter.html" class="bot-btn">
+                View AHR Gold Hunter
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             SIGNAL EA
+        ================================================== -->
+
+        <div class="bot-card">
+
+            <div class="bot-badge">
+                SIGNAL
+            </div>
+
+            <h3>
+                AHR Signal EA
+            </h3>
+
+            <p>
+                A signal-focused analysis system designed
+                to identify potential BUY and SELL opportunities
+                using multiple confirmation factors.
+            </p>
+
+            <ul>
+
+                <li>
+                    ✓ BUY / SELL Signals
+                </li>
+
+                <li>
+                    ✓ EMA Trend
+                </li>
+
+                <li>
+                    ✓ RSI Confirmation
+                </li>
+
+                <li>
+                    ✓ ADX Momentum
+                </li>
+
+                <li>
+                    ✓ Market Momentum
+                </li>
+
+                <li>
+                    ✓ Support / Resistance
+                </li>
+
+                <li>
+                    ✓ HTF Trend
+                </li>
+
+                <li>
+                    ✓ Signal Quality Score
+                </li>
+
+            </ul>
+
+            <a href="signal-ea.html" class="bot-btn">
+                View AHR Signal EA
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     HOW THE SYSTEMS WORK
+========================================================= -->
+
+<section class="section dark-section">
+
+    <div class="section-title">
+
+        <p>
+            SYSTEM WORKFLOW
+        </p>
+
+        <h2>
+            How AHR Trading Systems Work
+        </h2>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                01
+            </div>
+
+            <h3>
+                Market Scan
+            </h3>
+
+            <p>
+                The system evaluates available market
+                information and identifies possible
+                trading conditions.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                02
+            </div>
+
+            <h3>
+                Trend Check
+            </h3>
+
+            <p>
+                Trend and higher-timeframe conditions
+                are evaluated before considering a setup.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                03
+            </div>
+
+            <h3>
+                Confirmation
+            </h3>
+
+            <p>
+                Momentum, indicators, structure and
+                price action can be combined for confirmation.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                04
+            </div>
+
+            <h3>
+                Trading Setup
+            </h3>
+
+            <p>
+                When the required conditions align,
+                the system can identify a potential setup.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FEATURES
+========================================================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <p>
+            SYSTEM FEATURES
+        </p>
+
+        <h2>
+            Built For Structured Analysis
+        </h2>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📊
+            </div>
+
+            <h3>
+                Multi-Timeframe
+            </h3>
+
+            <p>
+                Analyze multiple timeframes to understand
+                broader market context and lower-timeframe
+                opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📈
+            </div>
+
+            <h3>
+                Trend Analysis
+            </h3>
+
+            <p>
+                EMA and higher-timeframe conditions can
+                help identify the current market direction.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                ⚡
+            </div>
+
+            <h3>
+                Momentum
+            </h3>
+
+            <p>
+                RSI, ADX and momentum conditions can
+                help filter weaker market situations.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🎯
+            </div>
+
+            <h3>
+                Structured Entries
+            </h3>
+
+            <p>
+                Systems are designed around predefined
+                conditions instead of random entries.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MT5
+========================================================= -->
+
+<section class="section dark-section">
+
+    <div class="section-title">
+
+        <p>
+            PLATFORM
+        </p>
+
+        <h2>
+            MetaTrader 5
+        </h2>
+
+        <p>
+            AHR TRADERS systems are designed around
+            the MT5 trading environment.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                💻
+            </div>
+
+            <h3>
+                MT5 Compatible
+            </h3>
+
+            <p>
+                Designed for MetaTrader 5 trading
+                environments.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🪙
+            </div>
+
+            <h3>
+                Forex & Gold
+            </h3>
+
+            <p>
+                Systems can be designed for instruments
+                such as XAUUSD and major forex pairs,
+                depending on the specific system.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                ⚙️
+            </div>
+
+            <h3>
+                Configurable
+            </h3>
+
+            <p>
+                Trading parameters can be configured
+                according to the specific EA version.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     RISK NOTICE
+========================================================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <p>
+            IMPORTANT
+        </p>
+
+        <h2>
+            Risk Management
+        </h2>
+
+    </div>
+
+
+    <div class="contact-box">
+
+        <h3>
+            Trading involves risk.
+        </h3>
+
+        <p>
+            AHR TRADERS trading systems are tools for
+            market analysis and execution. No trading
+            system can guarantee profits or eliminate risk.
+        </p>
+
+        <p>
+            Always use appropriate position sizing,
+            risk management and test any system on a
+            demo account before using real funds.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MEMBERSHIP CTA
+========================================================= -->
+
+<section class="cta">
+
+    <div>
+
+        <h2>
+            Want Access To AHR TRADERS Systems?
+        </h2>
+
+        <p>
+            Explore our membership plans and available
+            trading resources.
+        </p>
+
+        <button onclick="window.location.href='membership.html'">
+            View Membership
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <div>
+
+            <h3>
+                AHR TRADERS
+            </h3>
+
+            <p>
+                Smart Trading. Better Decisions.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="bots.html">
+                Trading Bots
+            </a>
+
+            <a href="strategies.html">
+                Strategies
+            </a>
+
+            <a href="videos.html">
+                Videos
+            </a>
+
+            <a href="tools.html">
+                Tools
+            </a>
+
+            <a href="membership.html">
+                Membership
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a href="register.html">
+                Register
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Trading Systems
+            </h4>
+
+            <a href="sniper-ea.html">
+                AHR Sniper EA
+            </a>
+
+            <a href="gold-hunter.html">
+                AHR Gold Hunter
+            </a>
+
+            <a href="signal-ea.html">
+                AHR Signal EA
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 AHR TRADERS. All Rights Reserved.
+        </p>
+
+        <p>
+            Trading involves risk. No strategy guarantees profits.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+
+
+</div>
+<div class="page" id="page-gold-hunter" style="display:none;">
+
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        AHR <span>TRADERS</span>
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="bots.html" class="active">
+            Trading Bots
+        </a>
+
+        <a href="#">
+            Strategies
+        </a>
+
+        <a href="#">
+            Videos
+        </a>
+
+        <a href="#">
+            Contact
+        </a>
+
+        <a href="#" class="login-btn">
+            Login
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            AHR TRADERS • XAUUSD
+        </div>
+
+        <h1>
+            AHR <span>Gold Hunter EA</span>
+        </h1>
+
+        <p>
+            A gold-focused algorithmic trading system
+            designed to analyze XAUUSD trend, momentum,
+            market structure and potential trading conditions.
+        </p>
+
+        <div class="product-price">
+            GOLD • XAUUSD
+        </div>
+
+
+        <!-- ================= BUTTONS ================= -->
+
+        <div class="product-buttons">
+
+            <a href="#"
+               class="product-btn download-btn"
+               onclick="alert('Download system will be connected after the EA .ex5 file is added.'); return false;">
+                DOWNLOAD EA
+            </a>
+
+            <a href="#"
+               class="product-btn demo-btn"
+               onclick="alert('Demo request system will be connected soon.'); return false;">
+                REQUEST DEMO
+            </a>
+
+            <a href="#"
+               class="product-btn buy-btn"
+               onclick="alert('Purchase system will be connected after payment setup.'); return false;">
+                BUY / GET EA
+            </a>
+
+        </div>
+
+        <p class="product-note">
+            MT5 • XAUUSD • Gold Trading System • Algorithmic Analysis
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OVERVIEW ================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>
+            Gold Hunter Overview
+        </h2>
+
+        <p>
+            A structured analysis system built specifically
+            around the characteristics of the gold market.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <h3>
+                🥇 Gold Focus
+            </h3>
+
+            <p>
+                Designed with <span class="gold-highlight">XAUUSD</span>
+                market conditions in mind.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                📈 Trend Detection
+            </h3>
+
+            <p>
+                Evaluates directional market conditions
+                before considering potential setups.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                ⚡ Momentum
+            </h3>
+
+            <p>
+                Momentum conditions are analyzed to help
+                identify stronger market movements.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>
+            Gold Hunter Features
+        </h2>
+
+        <p>
+            Multiple analysis layers help organize the
+            XAUUSD trading environment.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <h3>
+                Market Structure
+            </h3>
+
+            <p>
+                Evaluates swing highs, swing lows and
+                general market structure.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                Trend Filter
+            </h3>
+
+            <p>
+                Uses directional filters to identify
+                the broader market bias.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                Momentum Check
+            </h3>
+
+            <p>
+                Helps evaluate whether price movement
+                has sufficient momentum.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                Support & Resistance
+            </h3>
+
+            <p>
+                Important price levels are considered
+                during market analysis.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                Price Action
+            </h3>
+
+            <p>
+                Price behavior around important areas
+                is considered before a setup.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                Spread Filter
+            </h3>
+
+            <p>
+                Spread conditions can be filtered to
+                avoid unsuitable trading environments.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                Risk Management
+            </h3>
+
+            <p>
+                Designed around structured position
+                and risk-management concepts.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                Session Analysis
+            </h3>
+
+            <p>
+                Trading-session conditions can be used
+                as part of the overall market analysis.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>
+            How Gold Hunter Works
+        </h2>
+
+        <p>
+            A simple analysis flow for the gold market.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <div class="step-number">
+                01
+            </div>
+
+            <h3>
+                Scan XAUUSD
+            </h3>
+
+            <p>
+                The system analyzes the current
+                gold-market environment.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="step-number">
+                02
+            </div>
+
+            <h3>
+                Check Conditions
+            </h3>
+
+            <p>
+                Trend, momentum, structure and
+                important levels are evaluated.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <h3>
+                Identify Setup
+            </h3>
+
+            <p>
+                When the required conditions align,
+                a potential trading setup can be identified.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= GOLD MARKET ================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>
+            Designed For Gold Traders
+        </h2>
+
+        <p>
+            Built around the fast-moving nature of XAUUSD.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <h3>
+                XAUUSD
+            </h3>
+
+            <p>
+                Primary market focus.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                MT5
+            </h3>
+
+            <p>
+                Designed for MetaTrader 5 environments.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                Structured Analysis
+            </h3>
+
+            <p>
+                Multiple conditions are considered
+                instead of relying on one indicator.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <h2>
+        Explore AHR Gold Hunter
+    </h2>
+
+    <p>
+        Discover the AHR TRADERS gold-focused
+        algorithmic trading system.
+    </p>
+
+
+    <div class="product-buttons">
+
+        <a href="#"
+           class="product-btn demo-btn"
+           onclick="alert('Demo request system will be connected soon.'); return false;">
+            REQUEST DEMO
+        </a>
+
+        <a href="#"
+           class="product-btn buy-btn"
+           onclick="alert('Purchase system will be connected after payment setup.'); return false;">
+            BUY / GET EA
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="logo">
+        AHR <span>TRADERS</span>
+    </div>
+
+    <p>
+        © 2026 AHR TRADERS. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+
+
+</div>
+<div class="page" id="page-signal-ea" style="display:none;">
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        AHR <span>TRADERS</span>
+    </div>
+
+    <nav class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="bots.html" class="active">
+            Trading Bots
+        </a>
+
+        <a href="#">Strategies</a>
+
+        <a href="#">Videos</a>
+
+        <a href="#">Contact</a>
+
+        <a href="#" class="login-btn">
+            Login
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="product-hero">
+
+    <div>
+
+        <h1>
+            AHR <span>Signal EA</span>
+        </h1>
+
+        <p>
+            High-quality trading signal analysis system designed
+            to scan market structure, trend, momentum, support &
+            resistance and multiple confirmations before generating
+            a trading signal.
+        </p>
+
+        <div class="product-buttons">
+
+            <a href="#" class="product-btn primary"
+               onclick="signalDownload(); return false;">
+                DOWNLOAD EA
+            </a>
+
+            <a href="#" class="product-btn"
+               onclick="signalDemo(); return false;">
+                REQUEST DEMO
+            </a>
+
+            <a href="#" class="product-btn"
+               onclick="signalBuy(); return false;">
+                BUY / GET EA
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     OVERVIEW
+========================================================= -->
+
+<section class="product-section">
+
+    <h2>Signal EA Overview</h2>
+
+    <p class="section-description">
+        A structured confirmation-based signal engine designed
+        to reduce low-quality setups and focus on stronger market
+        conditions.
+    </p>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+
+            <h3>High Quality Signals</h3>
+
+            <p>
+                Multiple technical conditions are evaluated before
+                a BUY or SELL signal is considered.
+            </p>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <h3>Multi-Timeframe</h3>
+
+            <p>
+                Higher timeframe trend information can be combined
+                with lower timeframe confirmation for better
+                structured analysis.
+            </p>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <h3>Signal Dashboard</h3>
+
+            <p>
+                Important market conditions can be displayed inside
+                a clean dashboard so the trader can quickly understand
+                the current setup.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SIGNAL CONDITIONS
+========================================================= -->
+
+<section class="product-section">
+
+    <h2>Signal Confirmation System</h2>
+
+    <p class="section-description">
+        The system is designed around several confirmation layers
+        instead of relying on a single indicator.
+    </p>
+
+    <div class="signal-list">
+
+        <div class="signal-item">
+            <span>✓</span>
+            EMA Trend Confirmation
+        </div>
+
+        <div class="signal-item">
+            <span>✓</span>
+            RSI Momentum Confirmation
+        </div>
+
+        <div class="signal-item">
+            <span>✓</span>
+            ADX Trend Strength
+        </div>
+
+        <div class="signal-item">
+            <span>✓</span>
+            Price Momentum
+        </div>
+
+        <div class="signal-item">
+            <span>✓</span>
+            Support & Resistance
+        </div>
+
+        <div class="signal-item">
+            <span>✓</span>
+            Higher Timeframe Trend
+        </div>
+
+        <div class="signal-item">
+            <span>✓</span>
+            Market Structure
+        </div>
+
+        <div class="signal-item">
+            <span>✓</span>
+            Spread Filter
+        </div>
+
+        <div class="signal-item">
+            <span>✓</span>
+            Price Action Confirmation
+        </div>
+
+        <div class="signal-item">
+            <span>✓</span>
+            Signal Quality Score
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DASHBOARD PREVIEW
+========================================================= -->
+
+<section class="product-section">
+
+    <h2>Signal Dashboard</h2>
+
+    <p class="section-description">
+        A clean dashboard concept for monitoring the current
+        market conditions and signal quality.
+    </p>
+
+    <div class="signal-dashboard">
+
+        <div class="dashboard-title">
+
+            <h3>
+                AHR TRADERS ALGO
+            </h3>
+
+            <div class="status">
+                SIGNAL ONLY
+            </div>
+
+        </div>
+
+
+        <div class="signal-row">
+
+            <div class="signal-box">
+
+                <small>
+                    CURRENT SIGNAL
+                </small>
+
+                <strong class="buy-text">
+                    BUY
+                </strong>
+
+            </div>
+
+
+            <div class="signal-box">
+
+                <small>
+                    CONFIDENCE
+                </small>
+
+                <strong class="confidence">
+                    HIGH QUALITY
+                </strong>
+
+            </div>
+
+
+            <div class="signal-box">
+
+                <small>
+                    HTF TREND
+                </small>
+
+                <strong>
+                    BULLISH
+                </strong>
+
+            </div>
+
+
+            <div class="signal-box">
+
+                <small>
+                    MOMENTUM
+                </small>
+
+                <strong>
+                    STRONG
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="warning-box">
+
+        <strong>Important:</strong>
+
+        Signal quality depends on market conditions.
+        No trading system can guarantee profits or a fixed
+        win rate. Always use proper risk management and
+        verify signals before trading.
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     HOW IT WORKS
+========================================================= -->
+
+<section class="product-section">
+
+    <h2>How Signal EA Works</h2>
+
+    <p class="section-description">
+        The system follows a structured analysis process before
+        displaying a potential signal.
+    </p>
+
+    <div class="workflow">
+
+        <div class="workflow-step">
+
+            <div class="workflow-number">
+                01
+            </div>
+
+            <h3>Market Scan</h3>
+
+            <p>
+                The system scans the current market environment.
+            </p>
+
+        </div>
+
+
+        <div class="workflow-step">
+
+            <div class="workflow-number">
+                02
+            </div>
+
+            <h3>Trend Check</h3>
+
+            <p>
+                Higher timeframe and current trend conditions
+                are evaluated.
+            </p>
+
+        </div>
+
+
+        <div class="workflow-step">
+
+            <div class="workflow-number">
+                03
+            </div>
+
+            <h3>Confirmation</h3>
+
+            <p>
+                Momentum, structure, S/R and price action are
+                checked.
+            </p>
+
+        </div>
+
+
+        <div class="workflow-step">
+
+            <div class="workflow-number">
+                04
+            </div>
+
+            <h3>Signal</h3>
+
+            <p>
+                When enough conditions align, a potential
+                BUY or SELL signal can be displayed.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TIMEFRAMES
+========================================================= -->
+
+<section class="product-section">
+
+    <h2>Multi-Timeframe Analysis</h2>
+
+    <p class="section-description">
+        Signal analysis can be structured across multiple
+        timeframes for better context.
+    </p>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+
+            <h3>M15</h3>
+
+            <p>
+                Primary market direction and broader structure.
+            </p>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <h3>M5</h3>
+
+            <p>
+                Confirmation of momentum and market conditions.
+            </p>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <h3>M1</h3>
+
+            <p>
+                Lower timeframe signal and entry confirmation.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FEATURES
+========================================================= -->
+
+<section class="product-section">
+
+    <h2>Key Features</h2>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <h3>BUY / SELL Signals</h3>
+            <p>
+                Displays potential directional signals when
+                confirmation conditions align.
+            </p>
+        </div>
+
+
+        <div class="product-card">
+            <h3>Confidence Filter</h3>
+            <p>
+                Designed to separate stronger setups from
+                weaker market conditions.
+            </p>
+        </div>
+
+
+        <div class="product-card">
+            <h3>Momentum Analysis</h3>
+            <p>
+                Evaluates market momentum as part of the
+                confirmation process.
+            </p>
+        </div>
+
+
+        <div class="product-card">
+            <h3>HTF Trend</h3>
+            <p>
+                Higher timeframe direction is considered before
+                lower timeframe signals.
+            </p>
+        </div>
+
+
+        <div class="product-card">
+            <h3>S/R Analysis</h3>
+            <p>
+                Support and resistance areas can be used as
+                additional confirmation.
+            </p>
+        </div>
+
+
+        <div class="product-card">
+            <h3>Clean Dashboard</h3>
+            <p>
+                Important information is presented in a simple
+                and easy-to-read dashboard.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="product-cta">
+
+    <h2>
+        Trade With Better Information
+    </h2>
+
+    <p>
+        AHR Signal EA is designed to help traders organize
+        multiple market confirmations into a cleaner signal
+        workflow.
+    </p>
+
+    <div class="product-buttons">
+
+        <a href="bots.html" class="product-btn">
+            BACK TO TRADING BOTS
+        </a>
+
+        <a href="#" class="product-btn primary"
+           onclick="signalDemo(); return false;">
+            REQUEST DEMO
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <p>
+        © 2026 AHR TRADERS. All Rights Reserved.
+    </p>
+
+    <p>
+        Professional Trading Tools & Education
+    </p>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+
+
+
+</div>
+<div class="page" id="page-sniper-ea" style="display:none;">
+
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        AHR <span>TRADERS</span>
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="bots.html" class="active">
+            Trading Bots
+        </a>
+
+        <a href="#">
+            Strategies
+        </a>
+
+        <a href="#">
+            Videos
+        </a>
+
+        <a href="#">
+            Contact
+        </a>
+
+        <a href="#" class="login-btn">
+            Login
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            AHR TRADERS
+        </div>
+
+        <h1>
+            AHR <span>Sniper EA</span>
+        </h1>
+
+        <p>
+            High-quality algorithmic trading assistant
+            designed to analyze market structure,
+            trend, momentum and confirmation signals.
+        </p>
+
+        <div class="product-price">
+            Premium Trading System
+        </div>
+
+
+        <!-- ================= PRODUCT BUTTONS ================= -->
+
+        <div class="product-buttons">
+
+            <a href="#" class="product-btn download-btn"
+               onclick="alert('Download system will be connected after the EA .ex5 file is added.'); return false;">
+                DOWNLOAD EA
+            </a>
+
+            <a href="#" class="product-btn demo-btn"
+               onclick="alert('Demo request system will be connected soon.'); return false;">
+                REQUEST DEMO
+            </a>
+
+            <a href="#" class="product-btn buy-btn"
+               onclick="alert('Purchase system will be connected after payment setup.'); return false;">
+                BUY / GET EA
+            </a>
+
+        </div>
+
+        <p class="product-note">
+            MT5 • Algorithmic Analysis • Multi-Timeframe
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OVERVIEW ================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>
+            AHR Sniper EA
+        </h2>
+
+        <p>
+            A structured market-analysis system
+            built for traders who want cleaner setups.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <h3>
+                🎯 Sniper Analysis
+            </h3>
+
+            <p>
+                Filters multiple market conditions
+                before identifying potential trading setups.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                📊 Multi-Timeframe
+            </h3>
+
+            <p>
+                Combines higher-timeframe direction
+                with lower-timeframe confirmation.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                🛡 Risk Control
+            </h3>
+
+            <p>
+                Designed around structured entry,
+                stop-loss and risk-management concepts.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= SYSTEM FEATURES ================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>
+            System Features
+        </h2>
+
+        <p>
+            Multiple confirmation layers are used
+            to analyze the market.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <h3>
+                EMA Trend
+            </h3>
+
+            <p>
+                EMA-based trend direction analysis
+                helps identify the current market bias.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                RSI
+            </h3>
+
+            <p>
+                RSI confirmation is used to evaluate
+                buying and selling momentum.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                ADX
+            </h3>
+
+            <p>
+                ADX helps evaluate whether the market
+                has sufficient directional strength.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                Momentum
+            </h3>
+
+            <p>
+                Momentum conditions are analyzed
+                before considering an entry.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                HTF Trend
+            </h3>
+
+            <p>
+                Higher-timeframe direction is used
+                as an additional confirmation layer.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                S/R Zones
+            </h3>
+
+            <p>
+                Support and resistance areas are
+                considered during setup analysis.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                Price Action
+            </h3>
+
+            <p>
+                Price-action behavior is evaluated
+                around important market areas.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                Spread Filter
+            </h3>
+
+            <p>
+                Spread conditions can be filtered
+                to avoid unsuitable market conditions.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>
+            How It Works
+        </h2>
+
+        <p>
+            A simple three-stage analysis process.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <div class="step-number">
+                01
+            </div>
+
+            <h3>
+                Market Scan
+            </h3>
+
+            <p>
+                The system evaluates trend,
+                momentum and market conditions.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="step-number">
+                02
+            </div>
+
+            <h3>
+                Confirmation
+            </h3>
+
+            <p>
+                Multiple confirmation factors are
+                checked before a setup is considered.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <h3>
+                Entry Setup
+            </h3>
+
+            <p>
+                When the required conditions align,
+                the system identifies a potential setup.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= TRADING TIMEFRAMES ================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>
+            Multi-Timeframe Structure
+        </h2>
+
+        <p>
+            Designed for structured M15 → M5 → M1 analysis.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <h3>
+                M15
+            </h3>
+
+            <p>
+                Main trend and market direction analysis.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                M5
+            </h3>
+
+            <p>
+                Confirmation and momentum analysis.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>
+                M1
+            </h3>
+
+            <p>
+                Lower-timeframe entry confirmation.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <h2>
+        Ready to Explore AHR Sniper EA?
+    </h2>
+
+    <p>
+        Get access to the AHR TRADERS trading system
+        and explore its features.
+    </p>
+
+
+    <div class="product-buttons">
+
+        <a href="#" class="product-btn demo-btn"
+           onclick="alert('Demo request system will be connected soon.'); return false;">
+            REQUEST DEMO
+        </a>
+
+        <a href="#" class="product-btn buy-btn"
+           onclick="alert('Purchase system will be connected after payment setup.'); return false;">
+            BUY / GET EA
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="logo">
+        AHR <span>TRADERS</span>
+    </div>
+
+    <p>
+        © 2026 AHR TRADERS. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+
+
+</div>
+<div class="page" id="page-strategies" style="display:none;">
+
+
+<header class="navbar">
+
+    <div class="logo">
+        <span>AHR</span> TRADERS
+    </div>
+
+    <nav class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="bots.html">Trading Bots</a>
+
+        <a href="strategies.html" class="active">
+            Strategies
+        </a>
+
+        <a href="videos.html">
+            Videos
+        </a>
+
+        <a href="tools.html">
+            Tools
+        </a>
+
+        <a href="membership.html">
+            Membership
+        </a>
+
+        <a href="index.html#contact">
+            Contact
+        </a>
+
+        <a href="login.html" class="login-btn">
+            Login
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="hero-small">
+            AHR TRADERS EDUCATION
+        </p>
+
+        <h1>
+            Trading <span>Strategies</span>
+        </h1>
+
+        <h2>
+            Learn The Market.<br>
+            Build A Structured Approach.
+        </h2>
+
+        <p>
+            Explore price action, liquidity, market structure,
+            scalping, risk management and multi-timeframe
+            trading concepts.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#strategies" class="bot-btn">
+                Explore Strategies
+            </a>
+
+            <a href="videos.html" class="bot-btn">
+                Video Academy
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STRATEGIES -->
+
+<section class="section" id="strategies">
+
+    <div class="section-title">
+
+        <p>
+            CORE TRADING CONCEPTS
+        </p>
+
+        <h2>
+            Professional Trading Strategies
+        </h2>
+
+        <p>
+            Build your trading knowledge one concept at a time.
+        </p>
+
+    </div>
+
+
+    <div class="strategy-grid">
+
+
+        <!-- PRICE ACTION -->
+
+        <div class="strategy-card">
+
+            <div class="feature-icon">
+                📈
+            </div>
+
+            <h3>
+                Price Action
+            </h3>
+
+            <p>
+                Learn how price behaves through candles,
+                market reactions, highs, lows and key levels.
+            </p>
+
+            <ul>
+
+                <li>✓ Candlestick Behaviour</li>
+                <li>✓ Swing High / Low</li>
+                <li>✓ Rejection</li>
+                <li>✓ Breakout</li>
+                <li>✓ Retest</li>
+
+            </ul>
+
+            <a href="#price-action" class="bot-btn">
+                Learn More
+            </a>
+
+        </div>
+
+
+        <!-- LIQUIDITY -->
+
+        <div class="strategy-card">
+
+            <div class="feature-icon">
+                💧
+            </div>
+
+            <h3>
+                Liquidity Trading
+            </h3>
+
+            <p>
+                Understand liquidity zones and how price can
+                react around important highs and lows.
+            </p>
+
+            <ul>
+
+                <li>✓ EQH / EQL</li>
+                <li>✓ PDH / PDL</li>
+                <li>✓ Swing High / Low</li>
+                <li>✓ Liquidity Sweep</li>
+                <li>✓ Reaction Zones</li>
+
+            </ul>
+
+            <a href="#liquidity" class="bot-btn">
+                Learn More
+            </a>
+
+        </div>
+
+
+        <!-- SNIPER SCALPING -->
+
+        <div class="strategy-card">
+
+            <div class="feature-icon">
+                🎯
+            </div>
+
+            <h3>
+                Sniper Scalping
+            </h3>
+
+            <p>
+                A structured lower-timeframe approach focused
+                on confirmation before entry.
+            </p>
+
+            <ul>
+
+                <li>✓ M15 Context</li>
+                <li>✓ M5 Confirmation</li>
+                <li>✓ M1 Entry</li>
+                <li>✓ Momentum</li>
+                <li>✓ Small Structural SL</li>
+
+            </ul>
+
+            <a href="#scalping" class="bot-btn">
+                Learn More
+            </a>
+
+        </div>
+
+
+        <!-- MARKET STRUCTURE -->
+
+        <div class="strategy-card">
+
+            <div class="feature-icon">
+                🧭
+            </div>
+
+            <h3>
+                Market Structure
+            </h3>
+
+            <p>
+                Understand market direction through major
+                and minor structural movements.
+            </p>
+
+            <ul>
+
+                <li>✓ Higher High</li>
+                <li>✓ Higher Low</li>
+                <li>✓ Lower High</li>
+                <li>✓ Lower Low</li>
+                <li>✓ BOS / CHOCH</li>
+
+            </ul>
+
+            <a href="#structure" class="bot-btn">
+                Learn More
+            </a>
+
+        </div>
+
+
+        <!-- RISK MANAGEMENT -->
+
+        <div class="strategy-card">
+
+            <div class="feature-icon">
+                🛡️
+            </div>
+
+            <h3>
+                Risk Management
+            </h3>
+
+            <p>
+                Protect trading capital with structured
+                position sizing and controlled risk.
+            </p>
+
+            <ul>
+
+                <li>✓ Risk Per Trade</li>
+                <li>✓ Position Size</li>
+                <li>✓ Stop Loss</li>
+                <li>✓ Take Profit</li>
+                <li>✓ Risk / Reward</li>
+
+            </ul>
+
+            <a href="#risk" class="bot-btn">
+                Learn More
+            </a>
+
+        </div>
+
+
+        <!-- MULTI TIMEFRAME -->
+
+        <div class="strategy-card">
+
+            <div class="feature-icon">
+                🕐
+            </div>
+
+            <h3>
+                Multi-Timeframe Analysis
+            </h3>
+
+            <p>
+                Combine higher and lower timeframes to
+                understand context and improve execution.
+            </p>
+
+            <ul>
+
+                <li>✓ HTF Direction</li>
+                <li>✓ M15 Structure</li>
+                <li>✓ M5 Confirmation</li>
+                <li>✓ M1 Execution</li>
+                <li>✓ Confluence</li>
+
+            </ul>
+
+            <a href="#multi-timeframe" class="bot-btn">
+                Learn More
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRICE ACTION -->
+
+<section class="section dark-section" id="price-action">
+
+    <div class="section-title">
+
+        <p>
+            STRATEGY 01
+        </p>
+
+        <h2>
+            Price Action
+        </h2>
+
+    </div>
+
+    <div class="contact-box">
+
+        <h3>
+            Read Price Before Indicators
+        </h3>
+
+        <p>
+            Price action focuses on understanding how price
+            moves around important areas instead of depending
+            on indicators alone.
+        </p>
+
+        <p>
+            Key areas can include previous highs and lows,
+            support/resistance, breakouts, retests and
+            rejection candles.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- LIQUIDITY -->
+
+<section class="section" id="liquidity">
+
+    <div class="section-title">
+
+        <p>
+            STRATEGY 02
+        </p>
+
+        <h2>
+            Liquidity Trading
+        </h2>
+
+    </div>
+
+    <div class="contact-box">
+
+        <h3>
+            Identify Important Liquidity
+        </h3>
+
+        <p>
+            Traders often monitor areas where orders may
+            accumulate, such as equal highs, equal lows,
+            previous day high and previous day low.
+        </p>
+
+        <p>
+            A liquidity sweep followed by a strong reaction
+            can provide useful information about potential
+            market direction.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SCALPING -->
+
+<section class="section dark-section" id="scalping">
+
+    <div class="section-title">
+
+        <p>
+            STRATEGY 03
+        </p>
+
+        <h2>
+            Sniper Scalping
+        </h2>
+
+    </div>
+
+    <div class="contact-box">
+
+        <h3>
+            Multi-Timeframe Sniper Approach
+        </h3>
+
+        <p>
+            Start with the higher timeframe for context,
+            then move down to confirmation and execution.
+        </p>
+
+        <p>
+            Example workflow:
+            M15 context → M5 confirmation → M1 execution.
+        </p>
+
+        <p>
+            The goal is to wait for multiple conditions to
+            align instead of entering simply because price
+            reaches a level.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- MARKET STRUCTURE -->
+
+<section class="section" id="structure">
+
+    <div class="section-title">
+
+        <p>
+            STRATEGY 04
+        </p>
+
+        <h2>
+            Market Structure
+        </h2>
+
+    </div>
+
+    <div class="contact-box">
+
+        <h3>
+            Understand Market Direction
+        </h3>
+
+        <p>
+            Market structure helps traders identify whether
+            price is forming higher highs and higher lows or
+            lower highs and lower lows.
+        </p>
+
+        <p>
+            Break of Structure and Change of Character can
+            be used as additional context when evaluating
+            a potential change in market direction.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- RISK MANAGEMENT -->
+
+<section class="section dark-section" id="risk">
+
+    <div class="section-title">
+
+        <p>
+            STRATEGY 05
+        </p>
+
+        <h2>
+            Risk Management
+        </h2>
+
+    </div>
+
+    <div class="contact-box">
+
+        <h3>
+            Protect Your Trading Capital
+        </h3>
+
+        <p>
+            A good strategy is not enough without proper
+            risk management.
+        </p>
+
+        <p>
+            Position size should be calculated based on
+            account size, stop-loss distance and the amount
+            of capital you are willing to risk.
+        </p>
+
+        <p>
+            Never risk money you cannot afford to lose.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- MULTI TIMEFRAME -->
+
+<section class="section" id="multi-timeframe">
+
+    <div class="section-title">
+
+        <p>
+            STRATEGY 06
+        </p>
+
+        <h2>
+            Multi-Timeframe Analysis
+        </h2>
+
+    </div>
+
+    <div class="contact-box">
+
+        <h3>
+            Context → Confirmation → Execution
+        </h3>
+
+        <p>
+            Higher timeframes can provide market context,
+            while lower timeframes can be used for more
+            precise confirmation and execution.
+        </p>
+
+        <p>
+            A possible workflow is:
+            H1/H4 context → M15 structure → M5 confirmation
+            → M1 execution.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- LEARNING PROCESS -->
+
+<section class="section dark-section">
+
+    <div class="section-title">
+
+        <p>
+            LEARNING PROCESS
+        </p>
+
+        <h2>
+            A Simple Trading Workflow
+        </h2>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                01
+            </div>
+
+            <h3>
+                Market Context
+            </h3>
+
+            <p>
+                Determine the broader market direction
+                and important price levels.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                02
+            </div>
+
+            <h3>
+                Find The Level
+            </h3>
+
+            <p>
+                Identify liquidity, support/resistance
+                or another important market area.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                03
+            </div>
+
+            <h3>
+                Wait For Confirmation
+            </h3>
+
+            <p>
+                Avoid entering simply because price
+                reaches a level. Wait for confirmation.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                04
+            </div>
+
+            <h3>
+                Execute With Risk Control
+            </h3>
+
+            <p>
+                Define stop loss, position size and
+                target before entering the trade.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- VIDEO CTA -->
+
+<section class="cta">
+
+    <div>
+
+        <h2>
+            Want To Learn These Strategies?
+        </h2>
+
+        <p>
+            Continue your learning with the AHR TRADERS
+            Video Academy.
+        </p>
+
+        <button onclick="window.location.href='videos.html'">
+            Open Video Academy
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <div>
+
+            <h3>
+                AHR TRADERS
+            </h3>
+
+            <p>
+                Smart Trading. Better Decisions.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="bots.html">
+                Trading Bots
+            </a>
+
+            <a href="strategies.html">
+                Strategies
+            </a>
+
+            <a href="videos.html">
+                Videos
+            </a>
+
+            <a href="tools.html">
+                Tools
+            </a>
+
+            <a href="membership.html">
+                Membership
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a href="register.html">
+                Register
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Trading Systems
+            </h4>
+
+            <a href="sniper-ea.html">
+                AHR Sniper EA
+            </a>
+
+            <a href="gold-hunter.html">
+                AHR Gold Hunter
+            </a>
+
+            <a href="signal-ea.html">
+                AHR Signal EA
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 AHR TRADERS. All Rights Reserved.
+        </p>
+
+        <p>
+            Trading involves risk. No strategy guarantees profits.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+
+
+</div>
+<div class="page" id="page-tools" style="display:none;">
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <span>AHR</span> TRADERS
+    </div>
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="bots.html">
+            Trading Bots
+        </a>
+
+        <a href="strategies.html">
+            Strategies
+        </a>
+
+        <a href="videos.html">
+            Videos
+        </a>
+
+        <a href="tools.html" class="active">
+            Tools
+        </a>
+
+        <a href="membership.html">
+            Membership
+        </a>
+
+        <a href="index.html#contact">
+            Contact
+        </a>
+
+        <a href="login.html" class="login-btn">
+            Login
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="hero-small">
+            AHR TRADERS TOOLKIT
+        </p>
+
+        <h1>
+            Professional <span>Trading Tools</span>
+        </h1>
+
+        <h2>
+            Analyze Better.<br>
+            Trade Smarter.
+        </h2>
+
+        <p>
+            A collection of trading tools designed to help
+            traders analyze the market, manage risk and
+            improve their trading workflow.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#tools" class="bot-btn">
+                Explore Tools
+            </a>
+
+            <a href="membership.html" class="bot-btn">
+                View Membership
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TOOLS
+========================================================= -->
+
+<section class="section" id="tools">
+
+    <div class="section-title">
+
+        <p>
+            TRADINGVIEW
+        </p>
+
+        <h2>
+            TradingView Tools
+        </h2>
+
+        <p>
+            Clean chart-based tools for technical analysis.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <!-- TOOL 01 -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📊
+            </div>
+
+            <h3>
+                AHR Market Structure
+            </h3>
+
+            <p>
+                Identify important market structure,
+                swing points and directional movement.
+            </p>
+
+            <button
+                class="bot-btn"
+                onclick="toolMessage('AHR Market Structure')">
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <!-- TOOL 02 -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                💧
+            </div>
+
+            <h3>
+                AHR Liquidity Tool
+            </h3>
+
+            <p>
+                Study liquidity areas, swing highs,
+                swing lows, EQH and EQL.
+            </p>
+
+            <button
+                class="bot-btn"
+                onclick="toolMessage('AHR Liquidity Tool')">
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <!-- TOOL 03 -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🎯
+            </div>
+
+            <h3>
+                AHR Sniper Levels
+            </h3>
+
+            <p>
+                Structured levels designed to help
+                traders locate potential entry zones.
+            </p>
+
+            <button
+                class="bot-btn"
+                onclick="toolMessage('AHR Sniper Levels')">
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <!-- TOOL 04 -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                ⚡
+            </div>
+
+            <h3>
+                AHR FVG Tool
+            </h3>
+
+            <p>
+                Identify potential Fair Value Gap areas
+                for further price-action analysis.
+            </p>
+
+            <button
+                class="bot-btn"
+                onclick="toolMessage('AHR FVG Tool')">
+                Coming Soon
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MT5 TOOLS
+========================================================= -->
+
+<section class="section dark-section">
+
+    <div class="section-title">
+
+        <p>
+            METATRADER 5
+        </p>
+
+        <h2>
+            MT5 Trading Tools
+        </h2>
+
+        <p>
+            Tools and indicators designed for the
+            MetaTrader 5 environment.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <!-- MT5 TOOL 01 -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📈
+            </div>
+
+            <h3>
+                AHR Signal Indicator
+            </h3>
+
+            <p>
+                Multi-factor market analysis with
+                signal-quality confirmation.
+            </p>
+
+            <button
+                class="bot-btn"
+                onclick="toolMessage('AHR Signal Indicator')">
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <!-- MT5 TOOL 02 -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🎯
+            </div>
+
+            <h3>
+                AHR Sniper Indicator
+            </h3>
+
+            <p>
+                Designed for structured M1, M5 and M15
+                trading analysis.
+            </p>
+
+            <button
+                class="bot-btn"
+                onclick="toolMessage('AHR Sniper Indicator')">
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <!-- MT5 TOOL 03 -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🥇
+            </div>
+
+            <h3>
+                Gold Analysis Tool
+            </h3>
+
+            <p>
+                XAUUSD-focused analysis tools for
+                gold market structure and momentum.
+            </p>
+
+            <button
+                class="bot-btn"
+                onclick="toolMessage('Gold Analysis Tool')">
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <!-- MT5 TOOL 04 -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🖥️
+            </div>
+
+            <h3>
+                Trading Dashboard
+            </h3>
+
+            <p>
+                A clean dashboard for monitoring
+                trading conditions and signals.
+            </p>
+
+            <button
+                class="bot-btn"
+                onclick="toolMessage('Trading Dashboard')">
+                Coming Soon
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CALCULATORS
+========================================================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <p>
+            TRADING CALCULATORS
+        </p>
+
+        <h2>
+            Risk & Position Tools
+        </h2>
+
+        <p>
+            Calculate important trading values before
+            entering a position.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <!-- CALCULATOR 01 -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🧮
+            </div>
+
+            <h3>
+                Risk Calculator
+            </h3>
+
+            <p>
+                Calculate your potential account risk
+                before opening a trade.
+            </p>
+
+            <button
+                class="bot-btn"
+                onclick="toolMessage('Risk Calculator')">
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <!-- CALCULATOR 02 -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📐
+            </div>
+
+            <h3>
+                Position Size Calculator
+            </h3>
+
+            <p>
+                Estimate position size based on account
+                balance, risk and stop-loss distance.
+            </p>
+
+            <button
+                class="bot-btn"
+                onclick="toolMessage('Position Size Calculator')">
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <!-- CALCULATOR 03 -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                💰
+            </div>
+
+            <h3>
+                Profit & Loss Calculator
+            </h3>
+
+            <p>
+                Estimate potential profit or loss
+                before executing a trade.
+            </p>
+
+            <button
+                class="bot-btn"
+                onclick="toolMessage('Profit and Loss Calculator')">
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <!-- CALCULATOR 04 -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                ⚖️
+            </div>
+
+            <h3>
+                Risk / Reward Calculator
+            </h3>
+
+            <p>
+                Compare potential risk with your
+                planned trading target.
+            </p>
+
+            <button
+                class="bot-btn"
+                onclick="toolMessage('Risk Reward Calculator')">
+                Coming Soon
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MARKET ANALYSIS
+========================================================= -->
+
+<section class="section dark-section">
+
+    <div class="section-title">
+
+        <p>
+            MARKET ANALYSIS
+        </p>
+
+        <h2>
+            Market Intelligence Tools
+        </h2>
+
+        <p>
+            Additional tools planned for the AHR TRADERS
+            trading platform.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <!-- MARKET TOOL 01 -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📰
+            </div>
+
+            <h3>
+                Economic Calendar
+            </h3>
+
+            <p>
+                Monitor important economic events and
+                high-impact market news.
+            </p>
+
+            <button
+                class="bot-btn"
+                onclick="toolMessage('Economic Calendar')">
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <!-- MARKET TOOL 02 -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🕒
+            </div>
+
+            <h3>
+                Market Sessions
+            </h3>
+
+            <p>
+                Track major trading sessions including
+                London, New York and Asian sessions.
+            </p>
+
+            <button
+                class="bot-btn"
+                onclick="toolMessage('Market Sessions')">
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <!-- MARKET TOOL 03 -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📓
+            </div>
+
+            <h3>
+                Trading Journal
+            </h3>
+
+            <p>
+                Record trades, setups, mistakes and
+                performance statistics.
+            </p>
+
+            <button
+                class="bot-btn"
+                onclick="toolMessage('Trading Journal')">
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <!-- MARKET TOOL 04 -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🌐
+            </div>
+
+            <h3>
+                Market Dashboard
+            </h3>
+
+            <p>
+                Monitor market conditions and important
+                trading information from one dashboard.
+            </p>
+
+            <button
+                class="bot-btn"
+                onclick="toolMessage('Market Dashboard')">
+                Coming Soon
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FUTURE TOOLS
+========================================================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <p>
+            FUTURE DEVELOPMENT
+        </p>
+
+        <h2>
+            More Tools Are Coming
+        </h2>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🔔
+            </div>
+
+            <h3>
+                Trading Alerts
+            </h3>
+
+            <p>
+                Potential price, structure and signal
+                alerts for active traders.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🤖
+            </div>
+
+            <h3>
+                AI Market Analysis
+            </h3>
+
+            <p>
+                Future AI-powered analysis features
+                may be integrated into the platform.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📊
+            </div>
+
+            <h3>
+                Performance Analytics
+            </h3>
+
+            <p>
+                Analyze trading statistics and
+                historical performance.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🔐
+            </div>
+
+            <h3>
+                Member Tools
+            </h3>
+
+            <p>
+                Premium tools can later be restricted
+                to eligible membership accounts.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     RISK NOTICE
+========================================================= -->
+
+<section class="section">
+
+    <div class="contact-box">
+
+        <h3>
+            Trading Risk Notice
+        </h3>
+
+        <p>
+            Trading tools are designed to assist analysis
+            and decision-making. They do not guarantee
+            profitable trades.
+        </p>
+
+        <p>
+            Always use appropriate risk management and
+            understand the risks before trading live capital.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta">
+
+    <div>
+
+        <h2>
+            Want Access To More Tools?
+        </h2>
+
+        <p>
+            Explore AHR TRADERS membership and future
+            premium resources.
+        </p>
+
+        <button onclick="window.location.href='membership.html'">
+            Explore Membership
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <div>
+
+            <h3>
+                AHR TRADERS
+            </h3>
+
+            <p>
+                Smart Trading. Better Decisions.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="bots.html">
+                Trading Bots
+            </a>
+
+            <a href="strategies.html">
+                Strategies
+            </a>
+
+            <a href="videos.html">
+                Videos
+            </a>
+
+            <a href="tools.html">
+                Tools
+            </a>
+
+            <a href="membership.html">
+                Membership
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a href="register.html">
+                Register
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Trading Systems
+            </h4>
+
+            <a href="sniper-ea.html">
+                AHR Sniper EA
+            </a>
+
+            <a href="gold-hunter.html">
+                AHR Gold Hunter
+            </a>
+
+            <a href="signal-ea.html">
+                AHR Signal EA
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 AHR TRADERS. All Rights Reserved.
+        </p>
+
+        <p>
+            Trading involves risk. No strategy guarantees profits.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     PAGE JAVASCRIPT
+========================================================= -->
+
+
+
+
+
+
+</div>
+<div class="page" id="page-videos" style="display:none;">
+
+
+<nav class="navbar">
+
+    <div class="logo">
+        AHR <span>TRADERS</span>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="bots.html">Trading Bots</a>
+        <a href="strategies.html">Strategies</a>
+        <a href="videos.html" class="active">Videos</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="#" class="login-btn">Login</a>
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="video-hero">
+
+    <div class="video-hero-content">
+
+        <p class="hero-small">AHR TRADERS ACADEMY</p>
+
+        <h1>
+            Learn Trading.<br>
+            <span>Trade With Confidence.</span>
+        </h1>
+
+        <p>
+            Learn trading concepts through structured lessons covering
+            price action, liquidity, market structure, scalping,
+            risk management and more.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section class="categories">
+
+    <div class="section-title">
+
+        <h2>
+            Learning <span>Categories</span>
+        </h2>
+
+        <p>
+            Choose a topic and build your trading knowledge step by step.
+        </p>
+
+    </div>
+
+
+    <div class="category-grid">
+
+        <div class="category-card">
+            <h3>Beginner</h3>
+        </div>
+
+        <div class="category-card">
+            <h3>Price Action</h3>
+        </div>
+
+        <div class="category-card">
+            <h3>Liquidity</h3>
+        </div>
+
+        <div class="category-card">
+            <h3>Scalping</h3>
+        </div>
+
+        <div class="category-card">
+            <h3>Risk Management</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- VIDEO LESSONS -->
+
+<section class="academy-section">
+
+    <div class="section-title">
+
+        <h2>
+            Featured <span>Lessons</span>
+        </h2>
+
+        <p>
+            Start with the fundamentals and gradually move toward advanced concepts.
+        </p>
+
+    </div>
+
+
+    <div class="academy-grid">
+
+
+        <!-- VIDEO 01 -->
+
+        <div class="academy-card">
+
+            <div class="video-preview">
+
+                <div class="video-play">
+                    ▶
+                </div>
+
+                VIDEO 01
+
+            </div>
+
+            <div class="academy-content">
+
+                <span class="academy-tag">
+                    BEGINNER
+                </span>
+
+                <h3>
+                    Forex Trading Basics
+                </h3>
+
+                <p>
+                    Learn the basic concepts of forex,
+                    currency pairs, market sessions and trading terminology.
+                </p>
+
+                <a href="#" class="lesson-btn"
+                   onclick="alert('This video lesson will be added soon.'); return false;">
+                    Watch Lesson
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- VIDEO 02 -->
+
+        <div class="academy-card">
+
+            <div class="video-preview">
+
+                <div class="video-play">
+                    ▶
+                </div>
+
+                VIDEO 02
+
+            </div>
+
+            <div class="academy-content">
+
+                <span class="academy-tag">
+                    PRICE ACTION
+                </span>
+
+                <h3>
+                    Price Action Fundamentals
+                </h3>
+
+                <p>
+                    Understand candles, rejection,
+                    momentum, support and resistance.
+                </p>
+
+                <a href="#" class="lesson-btn"
+                   onclick="alert('This video lesson will be added soon.'); return false;">
+                    Watch Lesson
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- VIDEO 03 -->
+
+        <div class="academy-card">
+
+            <div class="video-preview">
+
+                <div class="video-play">
+                    ▶
+                </div>
+
+                VIDEO 03
+
+            </div>
+
+            <div class="academy-content">
+
+                <span class="academy-tag">
+                    LIQUIDITY
+                </span>
+
+                <h3>
+                    Liquidity & Market Structure
+                </h3>
+
+                <p>
+                    Learn swing highs, swing lows,
+                    liquidity sweeps, BOS and CHOCH.
+                </p>
+
+                <a href="#" class="lesson-btn"
+                   onclick="alert('This video lesson will be added soon.'); return false;">
+                    Watch Lesson
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- VIDEO 04 -->
+
+        <div class="academy-card">
+
+            <div class="video-preview">
+
+                <div class="video-play">
+                    ▶
+                </div>
+
+                VIDEO 04
+
+            </div>
+
+            <div class="academy-content">
+
+                <span class="academy-tag">
+                    SCALPING
+                </span>
+
+                <h3>
+                    Sniper Scalping
+                </h3>
+
+                <p>
+                    Learn a structured M15 → M5 → M1
+                    approach for high-quality trade setups.
+                </p>
+
+                <a href="#" class="lesson-btn"
+                   onclick="alert('This video lesson will be added soon.'); return false;">
+                    Watch Lesson
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- VIDEO 05 -->
+
+        <div class="academy-card">
+
+            <div class="video-preview">
+
+                <div class="video-play">
+                    ▶
+                </div>
+
+                VIDEO 05
+
+            </div>
+
+            <div class="academy-content">
+
+                <span class="academy-tag">
+                    RISK
+                </span>
+
+                <h3>
+                    Risk Management
+                </h3>
+
+                <p>
+                    Understand position sizing,
+                    stop loss, risk per trade and trading discipline.
+                </p>
+
+                <a href="#" class="lesson-btn"
+                   onclick="alert('This video lesson will be added soon.'); return false;">
+                    Watch Lesson
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- VIDEO 06 -->
+
+        <div class="academy-card">
+
+            <div class="video-preview">
+
+                <div class="video-play">
+                    ▶
+                </div>
+
+                VIDEO 06
+
+            </div>
+
+            <div class="academy-content">
+
+                <span class="academy-tag">
+                    ADVANCED
+                </span>
+
+                <h3>
+                    Multi-Timeframe Analysis
+                </h3>
+
+                <p>
+                    Learn how higher timeframe direction
+                    can be combined with lower timeframe execution.
+                </p>
+
+                <a href="#" class="lesson-btn"
+                   onclick="alert('This video lesson will be added soon.'); return false;">
+                    Watch Lesson
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COMING SOON -->
+
+<section class="coming-soon">
+
+    <h2>
+        More Lessons Coming Soon
+    </h2>
+
+    <p>
+        AHR TRADERS Academy will gradually include
+        complete trading courses, strategy lessons,
+        MT5 tutorials and advanced market analysis.
+    </p>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>
+        Build Your Trading Knowledge
+    </h2>
+
+    <p>
+        Explore our strategies and trading systems.
+    </p>
+
+    <button onclick="window.location.href='strategies.html'">
+        Explore Strategies
+    </button>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="logo">
+        AHR <span>TRADERS</span>
+    </div>
+
+    <p>
+        Professional Trading Tools & Education
+    </p>
+
+    <p>
+        © 2026 AHR TRADERS. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+
+
+</div>
+<div class="page" id="page-login" style="display:none;">
+
+
+<header class="navbar">
+    <div class="nav-container">
+
+        <div class="logo">
+            <a href="index.html">AHR <span>TRADERS</span></a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="bots.html">Trading Bots</a>
+            <a href="strategies.html">Strategies</a>
+            <a href="videos.html">Videos</a>
+            <a href="tools.html">Tools</a>
+            <a href="membership.html">Membership</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="login.html" class="active">Login</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<section class="auth-section">
+
+    <div class="auth-box">
+
+        <div class="auth-logo">
+            <h1>AHR TRADERS</h1>
+            <p>Login to your trading account</p>
+        </div>
+
+        <form class="auth-form" onsubmit="loginUser(event)">
+
+            <div>
+                <label>Email Address</label>
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+            <div>
+                <label>Password</label>
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required
+                >
+            </div>
+
+            <div class="remember-row">
+
+                <label class="remember">
+                    <input type="checkbox" id="rememberMe">
+                    Remember me
+                </label>
+
+                <span class="forgot" onclick="forgotPassword()">
+                    Forgot Password?
+                </span>
+
+            </div>
+
+            <div id="loginMessage" class="auth-message"></div>
+
+            <button type="submit" class="auth-button">
+                LOGIN
+            </button>
+
+        </form>
+
+
+        <div class="auth-links">
+            Don't have an account?
+            <a href="register.html">Create Account</a>
+        </div>
+
+
+        <div class="security-note">
+            <strong>Demo Authentication</strong><br>
+            This website currently uses browser Local Storage for testing.
+            Real encrypted authentication and database security will be added
+            when the backend is connected.
+        </div>
+
+
+        <a href="index.html" class="back-home">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div>
+            <h3>AHR TRADERS</h3>
+            <p>
+                Professional trading education, strategies,
+                tools and trading systems.
+            </p>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="bots.html">Trading Bots</a>
+            <a href="strategies.html">Strategies</a>
+            <a href="videos.html">Videos</a>
+        </div>
+
+        <div>
+            <h4>Account</h4>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="membership.html">Membership</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 AHR TRADERS. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+
+
+
+
+
+</div>
+<div class="page" id="page-register" style="display:none;">
+
+
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <div class="logo">
+            <a href="index.html">
+                AHR <span>TRADERS</span>
+            </a>
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="index.html">Home</a>
+            <a href="bots.html">Trading Bots</a>
+            <a href="strategies.html">Strategies</a>
+            <a href="videos.html">Videos</a>
+            <a href="tools.html">Tools</a>
+            <a href="membership.html">Membership</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="login.html">Login</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<section class="auth-section">
+
+    <div class="auth-box">
+
+        <div class="auth-logo">
+
+            <h1>AHR TRADERS</h1>
+
+            <p>
+                Create your trading account
+            </p>
+
+        </div>
+
+
+        <form class="auth-form" onsubmit="registerUser(event)">
+
+            <div>
+
+                <label>Full Name</label>
+
+                <input
+                    type="text"
+                    id="registerName"
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                    required
+                >
+
+            </div>
+
+
+            <div>
+
+                <label>Email Address</label>
+
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                    required
+                >
+
+            </div>
+
+
+            <div>
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Create a password"
+                    autocomplete="new-password"
+                    required
+                >
+
+            </div>
+
+
+            <div>
+
+                <label>Confirm Password</label>
+
+                <input
+                    type="password"
+                    id="registerConfirm"
+                    placeholder="Confirm your password"
+                    autocomplete="new-password"
+                    required
+                >
+
+            </div>
+
+
+            <label class="terms">
+
+                <input
+                    type="checkbox"
+                    id="terms"
+                >
+
+                <span>
+                    I agree to the
+                    <a href="#">Terms & Conditions</a>
+                    and understand that trading involves risk.
+                </span>
+
+            </label>
+
+
+            <div id="registerMessage" class="auth-message"></div>
+
+
+            <button
+                type="submit"
+                class="auth-button"
+            >
+                CREATE ACCOUNT
+            </button>
+
+        </form>
+
+
+        <div class="auth-links">
+
+            Already have an account?
+
+            <a href="login.html">
+                Login Here
+            </a>
+
+        </div>
+
+
+        <div class="security-note">
+
+            <strong>Frontend Demo</strong><br>
+
+            Your password is not stored in browser Local Storage.
+            Secure password authentication and database storage
+            will be added with the backend system.
+
+        </div>
+
+
+        <a
+            href="index.html"
+            class="back-home"
+        >
+            ← Back to Home
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div>
+
+            <h3>AHR TRADERS</h3>
+
+            <p>
+                Professional trading education,
+                strategies, tools and trading systems.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Quick Links</h4>
+
+            <a href="index.html">Home</a>
+            <a href="bots.html">Trading Bots</a>
+            <a href="strategies.html">Strategies</a>
+            <a href="videos.html">Videos</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Account</h4>
+
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="membership.html">Membership</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 AHR TRADERS. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+</div>
+<div class="page" id="page-dashboard" style="display:none;">
+
+
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                AHR <span>TRADERS</span>
+
+            </a>
+
+        </div>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="bots.html">
+                Trading Bots
+            </a>
+
+            <a href="strategies.html">
+                Strategies
+            </a>
+
+            <a href="videos.html">
+                Videos
+            </a>
+
+            <a href="tools.html">
+                Tools
+            </a>
+
+            <a href="membership.html">
+                Membership
+            </a>
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
+            <a href="dashboard.html" class="active">
+                Dashboard
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<section class="dashboard-section">
+
+    <div class="dashboard-container">
+
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <h1>
+                    Welcome,
+                    <span id="dashboardName">
+                        Trader
+                    </span>
+                </h1>
+
+                <p>
+                    Your AHR TRADERS control center
+                </p>
+
+            </div>
+
+
+            <button
+                class="logout-btn"
+                onclick="logoutUser()"
+            >
+                LOGOUT
+            </button>
+
+        </div>
+
+
+
+        <div class="user-card">
+
+            <h3>
+                Account Information
+            </h3>
+
+
+            <div class="user-info">
+
+                <div>
+                    Name:
+                    <strong id="userName">
+                        —
+                    </strong>
+                </div>
+
+
+                <div>
+                    Email:
+                    <strong id="userEmail">
+                        —
+                    </strong>
+                </div>
+
+
+                <div>
+                    Status:
+                    <strong>
+                        Active
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="dashboard-grid">
+
+            <div class="stat-card">
+
+                <h2>3</h2>
+
+                <p>
+                    Trading Bots
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h2>6</h2>
+
+                <p>
+                    Strategies
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h2>6</h2>
+
+                <p>
+                    Video Lessons
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h2>12</h2>
+
+                <p>
+                    Trading Tools
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="section-title">
+
+            <h2>
+                Quick Access
+            </h2>
+
+            <p>
+                Access your AHR TRADERS resources.
+            </p>
+
+        </div>
+
+
+        <div class="quick-grid">
+
+
+            <div class="quick-card">
+
+                <h3>
+                    Trading Bots
+                </h3>
+
+                <p>
+                    Explore AHR TRADERS automated
+                    trading systems.
+                </p>
+
+                <a href="bots.html">
+                    Open Bots →
+                </a>
+
+            </div>
+
+
+            <div class="quick-card">
+
+                <h3>
+                    Strategies
+                </h3>
+
+                <p>
+                    Learn price action, liquidity,
+                    scalping and market structure.
+                </p>
+
+                <a href="strategies.html">
+                    Open Strategies →
+                </a>
+
+            </div>
+
+
+            <div class="quick-card">
+
+                <h3>
+                    Video Academy
+                </h3>
+
+                <p>
+                    Learn trading step-by-step
+                    through structured lessons.
+                </p>
+
+                <a href="videos.html">
+                    Open Academy →
+                </a>
+
+            </div>
+
+
+            <div class="quick-card">
+
+                <h3>
+                    Trading Tools
+                </h3>
+
+                <p>
+                    Access indicators, calculators
+                    and future market tools.
+                </p>
+
+                <a href="tools.html">
+                    Open Tools →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="section-title">
+
+            <h2>
+                My Trading Systems
+            </h2>
+
+            <p>
+                AHR TRADERS premium trading systems.
+            </p>
+
+        </div>
+
+
+
+        <div class="bots-grid">
+
+
+            <div class="bot-card">
+
+                <h3>
+                    AHR Sniper EA
+                </h3>
+
+                <p>
+                    Multi-timeframe analysis system
+                    designed for structured sniper
+                    trade setups.
+                </p>
+
+                <a href="sniper-ea.html">
+                    View EA →
+                </a>
+
+            </div>
+
+
+            <div class="bot-card">
+
+                <h3>
+                    AHR Gold Hunter
+                </h3>
+
+                <p>
+                    XAUUSD-focused trading system
+                    designed around trend, momentum
+                    and market structure.
+                </p>
+
+                <a href="gold-hunter.html">
+                    View EA →
+                </a>
+
+            </div>
+
+
+            <div class="bot-card">
+
+                <h3>
+                    AHR Signal EA
+                </h3>
+
+                <p>
+                    Signal analysis system combining
+                    multiple confirmation factors.
+                </p>
+
+                <a href="signal-ea.html">
+                    View EA →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="membership-card">
+
+            <h2>
+                Upgrade Your Membership
+            </h2>
+
+            <p>
+                Unlock premium strategies, advanced
+                tools, indicators, academy content
+                and future trading systems.
+            </p>
+
+            <a href="membership.html">
+                VIEW MEMBERSHIP
+            </a>
+
+        </div>
+
+
+
+        <div class="dashboard-notice">
+
+            <strong>
+                Current System:
+            </strong>
+
+            This dashboard is currently running
+            with frontend Local Storage authentication.
+
+            Real database authentication, secure
+            passwords, membership permissions,
+            payments and private downloads will
+            be connected during the backend stage.
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div>
+
+            <h3>
+                AHR TRADERS
+            </h3>
+
+            <p>
+                Professional trading education,
+                strategies, tools and trading systems.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="bots.html">
+                Trading Bots
+            </a>
+
+            <a href="strategies.html">
+                Strategies
+            </a>
+
+            <a href="videos.html">
+                Videos
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Account
+            </h4>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="membership.html">
+                Membership
+            </a>
+
+            <a href="#" onclick="logoutUser(); return false;">
+                Logout
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 AHR TRADERS.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+</div>
+<div class="page" id="page-membership" style="display:none;">
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            AHR TRADERS
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="bots.html">Trading Bots</a>
+
+            <a href="strategies.html">Strategies</a>
+
+            <a href="videos.html">Videos</a>
+
+            <a href="tools.html">Tools</a>
+
+            <a href="membership.html" class="active">
+                Membership
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================= -->
+
+    <main class="membership-page">
+
+        <!-- HERO -->
+
+        <section class="membership-hero">
+
+            <h1>
+                Choose Your
+                <span>Membership</span>
+            </h1>
+
+            <p>
+                Choose the AHR TRADERS membership that fits
+                your trading education, tools and technology needs.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================
+             PRICING
+        ====================================== -->
+
+        <section class="pricing-grid">
+
+            <!-- FREE -->
+
+            <div class="pricing-card">
+
+                <div class="plan-name">
+                    FREE
+                </div>
+
+                <div class="plan-description">
+                    Start learning the fundamentals of trading.
+                </div>
+
+                <div class="plan-price">
+                    FREE
+                </div>
+
+                <ul class="plan-features">
+
+                    <li>
+                        <span class="check">✓</span>
+                        Basic Trading Strategies
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Beginner Video Lessons
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Basic Trading Resources
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Member Dashboard
+                    </li>
+
+                    <li>
+                        <span class="locked">×</span>
+                        Premium Indicators
+                    </li>
+
+                    <li>
+                        <span class="locked">×</span>
+                        Premium Trading Bots
+                    </li>
+
+                </ul>
+
+                <button
+                    class="plan-btn"
+                    onclick="freePlan()"
+                >
+                    GET STARTED
+                </button>
+
+            </div>
+
+
+            <!-- PREMIUM -->
+
+            <div class="pricing-card featured">
+
+                <div class="popular-badge">
+                    MOST POPULAR
+                </div>
+
+                <div class="plan-name">
+                    PREMIUM
+                </div>
+
+                <div class="plan-description">
+                    Advanced tools and education for serious traders.
+                </div>
+
+                <div class="plan-price">
+                    COMING SOON
+                </div>
+
+                <ul class="plan-features">
+
+                    <li>
+                        <span class="check">✓</span>
+                        Everything in FREE
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Premium Strategies
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Advanced Trading Tools
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Premium Indicators
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Advanced Video Academy
+                    </li>
+
+                    <li>
+                        <span class="locked">×</span>
+                        Premium EA Access
+                    </li>
+
+                </ul>
+
+                <button
+                    class="plan-btn"
+                    onclick="premiumPlan()"
+                >
+                    JOIN PREMIUM
+                </button>
+
+            </div>
+
+
+            <!-- PRO -->
+
+            <div class="pricing-card">
+
+                <div class="plan-name">
+                    PRO
+                </div>
+
+                <div class="plan-description">
+                    Full access to advanced AHR TRADERS technology.
+                </div>
+
+                <div class="plan-price">
+                    COMING SOON
+                </div>
+
+                <ul class="plan-features">
+
+                    <li>
+                        <span class="check">✓</span>
+                        Everything in PREMIUM
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Premium Trading Bots
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        AHR Sniper EA
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        AHR Gold Hunter
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        AHR Signal EA
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Full Trading Academy
+                    </li>
+
+                </ul>
+
+                <button
+                    class="plan-btn"
+                    onclick="proPlan()"
+                >
+                    JOIN PRO
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             BENEFITS
+        ====================================== -->
+
+        <section class="membership-benefits">
+
+            <h2>
+                Membership Benefits
+            </h2>
+
+            <div class="benefit-grid">
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+                        🤖
+                    </div>
+
+                    <h3>
+                        Trading Bots
+                    </h3>
+
+                    <p>
+                        Access AHR TRADERS trading technology
+                        when your membership supports it.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+                        📊
+                    </div>
+
+                    <h3>
+                        Indicators
+                    </h3>
+
+                    <p>
+                        Use structured market-analysis
+                        tools and indicators.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+                        🎓
+                    </div>
+
+                    <h3>
+                        Education
+                    </h3>
+
+                    <p>
+                        Learn trading concepts through
+                        structured lessons and strategies.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Member Access
+                    </h3>
+
+                    <p>
+                        Keep your trading resources organized
+                        inside your member dashboard.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             COMPARISON
+        ====================================== -->
+
+        <section class="comparison-section">
+
+            <h2>
+                Plan Comparison
+            </h2>
+
+            <table class="comparison-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Feature
+                        </th>
+
+                        <th>
+                            FREE
+                        </th>
+
+                        <th>
+                            PREMIUM
+                        </th>
+
+                        <th>
+                            PRO
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            Basic Strategies
+                        </td>
+
+                        <td class="yes">✓</td>
+
+                        <td class="yes">✓</td>
+
+                        <td class="yes">✓</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            Video Academy
+                        </td>
+
+                        <td class="yes">✓</td>
+
+                        <td class="yes">✓</td>
+
+                        <td class="yes">✓</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            Advanced Indicators
+                        </td>
+
+                        <td class="no">—</td>
+
+                        <td class="yes">✓</td>
+
+                        <td class="yes">✓</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            Premium Tools
+                        </td>
+
+                        <td class="no">—</td>
+
+                        <td class="yes">✓</td>
+
+                        <td class="yes">✓</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            AHR Trading Bots
+                        </td>
+
+                        <td class="no">—</td>
+
+                        <td class="no">—</td>
+
+                        <td class="yes">✓</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            Full Academy
+                        </td>
+
+                        <td class="no">—</td>
+
+                        <td class="no">—</td>
+
+                        <td class="yes">✓</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- =====================================
+             NOTE
+        ====================================== -->
+
+        <div class="membership-note">
+
+            <strong>AHR TRADERS Membership</strong><br>
+
+            Premium and Pro payment systems are currently
+            under development. Membership prices and payment
+            methods will be connected when the real backend
+            and payment system are added.
+
+        </div>
+
+
+        <!-- =====================================
+             CTA
+        ====================================== -->
+
+        <section class="membership-cta">
+
+            <h2>
+                Ready to Start Trading Smarter?
+            </h2>
+
+            <p>
+                Explore our trading bots, strategies and tools.
+            </p>
+
+            <a href="bots.html">
+                EXPLORE TRADING BOTS
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <p>
+            © 2026 AHR TRADERS. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    
+
+
+</div>
+<script>
+// ============================================================
+// AHR TRADERS
+// GLOBAL WEBSITE JAVASCRIPT
+// ============================================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    console.log(
+        "AHR TRADERS website loaded successfully."
+    );
+
+});
+
+
+// ============================================================
+// TOOL MESSAGE
+// ============================================================
+
+function toolMessage(toolName) {
+
+    alert(
+        toolName +
+        " is currently under development."
+    );
+
+}
+
+
+// ============================================================
+// VIDEO LESSON MESSAGE
+// ============================================================
+
+function lessonMessage(lessonName) {
+
+    alert(
+        lessonName +
+        " lesson is coming soon."
+    );
+
+}
+
+
+// ============================================================
+// MEMBERSHIP
+// ============================================================
+
+function freePlan() {
+
+    const loggedIn =
+        localStorage.getItem("ahrLoggedIn");
+
+    if (loggedIn === "true") {
+
+        window.location.href =
+            "dashboard.html";
+
+        return;
+    }
+
+
+    window.location.href =
+        "register.html";
+
+}
+
+
+function premiumPlan() {
+
+    alert(
+        "Premium membership payment system will be connected soon."
+    );
+
+}
+
+
+function proPlan() {
+
+    alert(
+        "PRO membership payment system will be connected soon."
+    );
+
+}
+
+
+// ============================================================
+// GENERIC BUTTON MESSAGE
+// ============================================================
+
+function comingSoon(featureName) {
+
+    alert(
+        featureName +
+        " will be available soon."
+    );
+
+}
+
+
+// ============================================================
+// PROTECT MEMBER PAGES
+// ============================================================
+
+function checkLogin() {
+
+    const loggedIn =
+        localStorage.getItem(
+            "ahrLoggedIn"
+        );
+
+
+    if (loggedIn !== "true") {
+
+        window.location.href =
+            "login.html";
+
+        return false;
+    }
+
+
+    return true;
+}
+// ===== signal-ea.html inline script =====
+
+
+function signalDownload() {
+
+    alert(
+        "AHR Signal EA download system will be connected after the EA .ex5 file is added."
+    );
+
+}
+
+
+function signalDemo() {
+
+    alert(
+        "AHR Signal EA demo request system will be connected soon."
+    );
+
+}
+
+
+function signalBuy() {
+
+    alert(
+        "AHR Signal EA purchase system will be connected after payment setup."
+    );
+
+}
+
+
+// ===== tools.html inline script =====
+
+
+function toolMessage(toolName) {
+
+    alert(
+        toolName +
+        "\n\nThis tool is currently under development."
+    );
+
+}
+
+
+// ===== login.html inline script =====
+
+
+function showLoginMessage(message, type) {
+
+    const box = document.getElementById("loginMessage");
+
+    box.textContent = message;
+
+    box.className = "auth-message " + type;
+}
+
+
+function loginUser(event) {
+
+    event.preventDefault();
+
+    const email =
+        document.getElementById("loginEmail").value
+        .trim()
+        .toLowerCase();
+
+    const password =
+        document.getElementById("loginPassword").value.trim();
+
+    const remember =
+        document.getElementById("rememberMe").checked;
+
+
+    if (!email || !password) {
+
+        showLoginMessage(
+            "Please enter your email and password.",
+            "error"
+        );
+
+        return;
+    }
+
+
+    const registered =
+        localStorage.getItem("ahrRegistered");
+
+    const registeredEmail =
+        localStorage.getItem("ahrUserEmail");
+
+
+    if (registered !== "true" || !registeredEmail) {
+
+        showLoginMessage(
+            "No account found. Please create an account first.",
+            "error"
+        );
+
+        return;
+    }
+
+
+    if (email !== registeredEmail.toLowerCase()) {
+
+        showLoginMessage(
+            "This email is not registered. Please use your registered email.",
+            "error"
+        );
+
+        return;
+    }
+
+
+    /*
+       DEMO LOGIN
+
+       Password is intentionally NOT stored in Local Storage.
+       Therefore this frontend demo only checks that a password
+       was entered and that the registered email matches.
+
+       Real password verification will require a backend.
+    */
+
+
+    localStorage.setItem("ahrLoggedIn", "true");
+    localStorage.setItem("ahrUserEmail", email);
+
+    if (remember) {
+        localStorage.setItem("ahrRememberMe", "true");
+    } else {
+        localStorage.removeItem("ahrRememberMe");
+    }
+
+
+    showLoginMessage(
+        "Login successful. Opening your dashboard...",
+        "success"
+    );
+
+
+    setTimeout(function () {
+
+        window.location.href = "dashboard.html";
+
+    }, 800);
+}
+
+
+function forgotPassword() {
+
+    alert(
+        "Password reset will be available after the secure backend system is connected."
+    );
+
+}
+
+
+// ===== register.html inline script =====
+
+
+function showRegisterMessage(message, type) {
+
+    const box =
+        document.getElementById("registerMessage");
+
+    box.textContent = message;
+
+    box.className =
+        "auth-message " + type;
+}
+
+
+function registerUser(event) {
+
+    event.preventDefault();
+
+
+    const name =
+        document.getElementById("registerName")
+        .value
+        .trim();
+
+
+    const email =
+        document.getElementById("registerEmail")
+        .value
+        .trim()
+        .toLowerCase();
+
+
+    const password =
+        document.getElementById("registerPassword")
+        .value;
+
+
+    const confirmPassword =
+        document.getElementById("registerConfirm")
+        .value;
+
+
+    const terms =
+        document.getElementById("terms").checked;
+
+
+    if (name.length < 2) {
+
+        showRegisterMessage(
+            "Please enter your full name.",
+            "error"
+        );
+
+        return;
+    }
+
+
+    if (!email.includes("@")) {
+
+        showRegisterMessage(
+            "Please enter a valid email address.",
+            "error"
+        );
+
+        return;
+    }
+
+
+    if (password.length < 6) {
+
+        showRegisterMessage(
+            "Password must contain at least 6 characters.",
+            "error"
+        );
+
+        return;
+    }
+
+
+    if (password !== confirmPassword) {
+
+        showRegisterMessage(
+            "Passwords do not match.",
+            "error"
+        );
+
+        return;
+    }
+
+
+    if (!terms) {
+
+        showRegisterMessage(
+            "Please accept the Terms & Conditions.",
+            "error"
+        );
+
+        return;
+    }
+
+
+    /*
+       DEMO ACCOUNT STORAGE
+
+       We intentionally DO NOT store the password.
+    */
+
+    localStorage.setItem(
+        "ahrUserName",
+        name
+    );
+
+    localStorage.setItem(
+        "ahrUserEmail",
+        email
+    );
+
+    localStorage.setItem(
+        "ahrRegistered",
+        "true"
+    );
+
+    localStorage.setItem(
+        "ahrLoggedIn",
+        "true"
+    );
+
+
+    showRegisterMessage(
+        "Account created successfully. Opening dashboard...",
+        "success"
+    );
+
+
+    setTimeout(function () {
+
+        window.location.href =
+            "dashboard.html";
+
+    }, 900);
+
+}
+
+
+// ===== dashboard.html inline script =====
+
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        const loggedIn =
+            localStorage.getItem(
+                "ahrLoggedIn"
+            );
+
+
+        if (loggedIn !== "true") {
+
+            alert(
+                "Please login to access your dashboard."
+            );
+
+            window.location.href =
+                "login.html";
+
+            return;
+
+        }
+
+
+        const name =
+            localStorage.getItem(
+                "ahrUserName"
+            ) || "Trader";
+
+
+        const email =
+            localStorage.getItem(
+                "ahrUserEmail"
+            ) || "—";
+
+
+        document.getElementById(
+            "dashboardName"
+        ).textContent = name;
+
+
+        document.getElementById(
+            "userName"
+        ).textContent = name;
+
+
+        document.getElementById(
+            "userEmail"
+        ).textContent = email;
+
+    }
+);
+
+
+
+function logoutUser() {
+
+    localStorage.removeItem(
+        "ahrLoggedIn"
+    );
+
+    localStorage.removeItem(
+        "ahrRememberMe"
+    );
+
+
+    alert(
+        "You have been logged out."
+    );
+
+
+    window.location.href =
+        "login.html";
+
+}
+
+
+// ===== membership.html inline script =====
+
+
+        function freePlan() {
+
+            window.location.href = "dashboard.html";
+
+        }
+
+
+        function premiumPlan() {
+
+            alert(
+                "Premium Membership\n\n" +
+                "Payment system will be connected soon."
+            );
+
+        }
+
+
+        function proPlan() {
+
+            alert(
+                "Pro Membership\n\n" +
+                "Payment system will be connected soon."
+            );
+
+        }
+
+    
+
+function showPage(pid) {
+    document.querySelectorAll('.page').forEach(function (p) {
+        p.style.display = 'none';
+    });
+    var el = document.getElementById('page-' + pid);
+    if (el) {
+        el.style.display = 'block';
+    }
+}
+
+document.addEventListener('click', function (e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (!href) return;
+
+    var m = href.match(/^([a-z0-9-]+)\.html(#.*)?$/i);
+    if (m) {
+        e.preventDefault();
+        showPage(m[1]);
+        if (m[2]) {
+            setTimeout(function () {
+                var target = document.querySelector(m[2]);
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+                else window.scrollTo(0, 0);
+            }, 30);
+        } else {
+            window.scrollTo(0, 0);
+        }
+    }
+});
+
+</script>
+</body>
+</html>
